@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/Plug-in/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  </head>
+  <body>
+      <button type="button" id="loginBtn" class="btn btn-primary" data-toggle="modal" data-target="#loginAndRegister" data-whatever="@mdo">登录</button>
+      <button type="button" id="registerBtn" class="btn btn-primary" data-toggle="modal" data-target="#loginAndRegister" data-whatever="@mdo">注册</button>
+
+      <div class="modal fade" id="loginAndRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+          <div id="loginContent" class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="exampleModalLabel">登录</h4>
+            </div>
+            <div class="modal-body">
+              <form action="/login" method="post">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="recipient-name" placeholder="用户名" name="username">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="message-text" placeholder="密码" name="password"/>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary" value="send"/>
+                  </div>
+              </form>
+            </div>
+          </div>
+
+          <div id="registerContent" class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">注册</h4>
+              </div>
+              <div class="modal-body">
+                <form action="/register" method="post">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="recipient-name" placeholder="用户名" name="username">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="message-text" placeholder="密码" name="password"/>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <input type="submit" class="btn btn-primary"/>
+                    </div>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+   </body>
+  <script src="/Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+  <script src="/Plug-in/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script src="/javascripts/loginAndRegister.js"></script>
+</html>
