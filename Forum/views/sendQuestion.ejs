@@ -2,11 +2,267 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>quiz</title>
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="stylesheets/question.css">
+
 </head>
 <body>
-    发布问题的页面
+<div id="header">
+    <div class="container">
+        <a href="/" class="logo"></a>
+        <div class="main-nav">
+            <ul class="nav-list">
+                <li class="main-nav-list">
+                    <div class="show-menu">
+                        <span>首页</span>
+                        <div class="icon ico-arrow-down-b"></div>
+                    </div>
+                    <!-- 首页按钮下拉菜单 -->
+
+                </li>
+                <li class="nav-item athor">
+                    <span>登录</span>
+                    <span>·注册</span>
+                </li>
+                <li class="nav-item loginon">
+                    <a href="#"></a>
+                    <div class="userimg"><img src="" alt=""></div>
+                </li>
+            </ul>
+            <div class="show-down-box">
+                <ul class="show-down">
+                    <li class="current"><a>首页</a></li>
+                    <li><a>专栏</a></li>
+                    <li><a>收藏集</a></li>
+                    <li><a>发现</a></li>
+                    <li><a>开源库</a></li>
+                </ul>
+            </div>
+            <div class="show-personal-down">
+                <ul>
+                    <li>
+                        <a>
+                            <i><img src="../images/write.png"/></i>
+                            <span>写文章</span>
+                        </a>
+                    </li>
+                    <li class="li-line">
+                        <a>
+                            <i><img src="../images/draft.png"/></i>
+                            <span>草稿</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i><img src="../images/mypage.png"/></i>
+                            <span>我的主页</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i><img src="../images/problem.png"/></i>
+                            <span>我的问题</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i><img src="../images/collection.png"/></i>
+                            <span>我的收藏</span>
+                        </a>
+                    </li>
+                    <li class="li-line">
+                        <a>
+                            <i><img src="../images/label.png"/></i>
+                            <span>标签管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i><img src="../images/set.png"/></i>
+                            <span>设置</span>
+                        </a>
+                    </li>
+                    <li class="li-line">
+                        <a>
+                            <i><img src="../images/about.png"/></i>
+                            <span>关于</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i><img src="../images/loginout.png"/></i>
+                            <span>登出</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="quiz-box">
+    <div class="title-box">
+        <input placeholder="标题：一句话说清楚，用问号结尾" class="title"></div>
+    <div class="tag-box">
+        <div class="tag-text" id="tag-text">标签</div>
+        <div class="tag-select-box" id="tag-select-box">
+            <div class="select-box" id="select-box">
+                <ul>
+                    <li class="label-head selected">开发语言</li>
+                    <li class="label-head ">平台框架</li>
+                    <li class="label-head ">服务器</li>
+                    <li class="label-head ">数据库和缓存</li>
+                    <li class="label-head ">开发工具</li>
+                    <li class="label-head ">系统设备</li>
+                    <li class="label-head ">其他</li>
+                </ul>
+            </div>
+
+            <div class="development-language">
+                <ul>
+                    <li class="down">javascript</li>
+                    <li class="down">php</li>
+                    <li class="down">css</li>
+                    <li class="down">html</li>
+                    <li class="down">java</li>
+                    <li class="down">python</li>
+                    <li class="down">html5</li>
+                    <li class="down">node.js</li>
+                    <li class="down">c++</li>
+                    <li class="down">c</li>
+                    <li class="down">objective-c</li>
+                    <li class="down">golang</li>
+                    <li class="down">shell</li>
+                    <li class="down">swift</li>
+                    <li class="down">c#</li>
+                    <li class="down">ruby</li>
+                    <li class="down">bash</li>
+                    <li class="down">sass</li>
+                    <li class="down">typescript</li>
+                    <li class="down">asp.net</li>
+                    <li class="down">less</li>
+                    <li class="down">lua</li>
+                    <li class="down">scala</li>
+                    <li class="down">coffeescript</li>
+                    <li class="down">actionscript</li>
+                    <li class="down">eriang</li>
+                    <li class="down">perl</li>
+                    <li class="down">rust</li>
+                </ul>
+            </div>
+            <div class="platform-framework">
+                <ul>
+                    <li class="down">laravel</li>
+                    <li class="down">flask</li>
+                    <li class="down">spring</li>
+                    <li class="down">django</li>
+                    <li class="down">express</li>
+                    <li class="down">ruby-on-rails</li>
+                    <li class="down">yii</li>
+                    <li class="down">tornado</li>
+                    <li class="down">koa</li>
+                    <li class="down">struts</li>
+                </ul>
+            </div>
+            <div class="server">
+                <ul>
+                    <li class="down">linux</li>
+                    <li class="down">nginx</li>
+                    <li class="down">apache</li>
+                    <li class="down">docker</li>
+                    <li class="down">ubuntu</li>
+                    <li class="down">centos</li>
+                    <li class="down">缓存</li>
+                    <li class="down">tomcat</li>
+                    <li class="down">负载均衡</li>
+                    <li class="down">unix</li>
+                    <li class="down">hadoop</li>
+                    <li class="down">windows-sever</li>
+                </ul>
+            </div>
+            <div class="database-and-cache">
+                <ul>
+                    <li class="down">mysql</li>
+                    <li class="down">sql</li>
+                    <li class="down">redis</li>
+                    <li class="down">mongodb</li>
+                    <li class="down">oracle</li>
+                    <li class="down">nosql</li>
+                    <li class="down">memcached</li>
+                    <li class="down">sqlserver</li>
+                    <li class="down">sqlite</li>
+                    <li class="down">postgresql</li>
+                </ul>
+            </div>
+            <div class="development-tool">
+                <ul>
+                    <li class="down">git</li>
+                    <li class="down">github</li>
+                    <li class="down">vim</li>
+                    <li class="down">xcode</li>
+                    <li class="down">sublime-text</li>
+                    <li class="down">eclipse</li>
+                    <li class="down">visual-studio-code</li>
+                    <li class="down">intellij-idea</li>
+                    <li class="down">maven</li>
+                    <li class="down">svn</li>
+                    <li class="down">ide</li>
+                    <li class="down">atom</li>
+                    <li class="down">visual-studio</li>
+                    <li class="down">emacs</li>
+                    <li class="down">hg</li>
+                    <li class="down">textmate</li>
+                </ul>
+            </div>
+            <div class="system-device">
+                <ul>
+                    <li class="down">android</li>
+                    <li class="down">ios</li>
+                    <li class="down">chrome</li>
+                    <li class="down">windows</li>
+                    <li class="down">iphone</li>
+                    <li class="down">firefox</li>
+                    <li class="down">internet-explore</li>
+                    <li class="down">safari</li>
+                    <li class="down">ipad</li>
+                    <li class="down">opera</li>
+                    <li class="down">apple-watch</li>
+                </ul>
+            </div>
+            <div class="other">
+                <ul>
+                    <li class="down">react.js</li>
+                    <li class="down">搜索引擎</li>
+                    <li class="down">html5</li>
+                    <li class="down">virtualenv</li>
+                    <li class="down">lucene</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="quiz-content">
+    <textarea class="content" placeholder="
+1.描述你的问题
+
+2.贴上相关的代码
+
+3.贴上报错信息
+
+4.贴上相关截图
+
+5.已经尝试过哪些方法仍然没有解决（附上相关链接）"></textarea>
+    </div>
+</div>
+<div class="quiz-foot-box">
+    <div class="quiz-foot">
+        <a href="javascript:(0)" class="upload" id="upload">发布问题</a>
+    </div>
+</div>
+<script src="Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+<script src="javascripts/question.js"></script>
 </body>
 </html>
