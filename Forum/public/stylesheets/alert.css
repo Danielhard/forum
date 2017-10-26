@@ -1,0 +1,13 @@
+.alert {
+  width:97%;
+  text-align: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  font-size: 0.16rem;
+  padding: 10px 5px;
+  background: #00B7FF;
+  opacity: .8;
+  filter: alpha(opacity=80);
+  color: #fff;
+}

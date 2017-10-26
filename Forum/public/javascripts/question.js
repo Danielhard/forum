@@ -69,7 +69,7 @@
     };
     console.log(data["content"]);
     $.post("/sendQuestion/subProblem",data,function (data) {
-      alert(data);
+      alert(data,1000);
     })
   });
 })();
