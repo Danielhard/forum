@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+		<link rel="stylesheet" href="../public/stylesheets/base.css">
+		<link rel="stylesheet" href="../public/stylesheets/index.css">
+		<link rel="stylesheet" href="../public/stylesheets/profile.css">
+		<link rel="stylesheet" href="../public/stylesheets/profiletoast.css">
+	</head>
+
+	<body>
+		<div id="juejin">
+			<div id="view-container">
+				<!-- 导航栏   -->
+				<div id="header">
+					<div class="container">
+						<a href="/" class="logo"></a>
+						<div class="main-nav">
+							<ul class="nav-list">
+								<li class="main-nav-list">
+									<div class="show-menu">
+										<span>首页</span>
+										<div class="icon ico-arrow-down-b"></div>
+									</div>
+									<!-- 首页按钮下拉菜单 -->
+
+								</li>
+								<li class="nav-item athor">
+									<span>登录</span>
+									<span>·注册</span>
+								</li>
+								<li class="nav-item loginon">
+									<a href="#"></a>
+									<div class="userimg"><img src="" alt=""></div>
+								</li>
+							</ul>
+							<div class="show-down-box">
+								<ul class="show-down">
+									<li class="current">
+										<a>首页</a>
+									</li>
+									<li>
+										<a>专栏</a>
+									</li>
+									<li>
+										<a>收藏集</a>
+									</li>
+									<li>
+										<a>发现</a>
+									</li>
+									<li>
+										<a>开源库</a>
+									</li>
+								</ul>
+							</div>
+							<div class="show-personal-down">
+								<ul>
+									<li>
+										<a>
+											<i><img src="../public/images/write.png"/></i>
+											<span>写文章</span>
+										</a>
+									</li>
+									<li class="li-line">
+										<a>
+											<i><img src="../public/images/draft.png"/></i>
+											<span>草稿</span>
+										</a>
+									</li>
+									<li>
+										<a>
+											<i><img src="../public/images/mypage.png"/></i>
+											<span>我的主页</span>
+										</a>
+									</li>
+									<li>
+										<a>
+											<i><img src="../public/images/problem.png"/></i>
+											<span>我的问题</span>
+										</a>
+									</li>
+									<li>
+										<a>
+											<i><img src="../public/images/collection.png"/></i>
+											<span>我的收藏</span>
+										</a>
+									</li>
+									<li class="li-line">
+										<a>
+											<i><img src="../public/images/label.png"/></i>
+											<span>标签管理</span>
+										</a>
+									</li>
+									<li>
+										<a>
+											<i><img src="../public/images/set.png"/></i>
+											<span>设置</span>
+										</a>
+									</li>
+									<li class="li-line">
+										<a>
+											<i><img src="../public/images/about.png"/></i>
+											<span>关于</span>
+										</a>
+									</li>
+									<li>
+										<a>
+											<i><img src="../public/images/loginout.png"/></i>
+											<span>登出</span>
+										</a>
+									</li>
+								</ul>
+
+								</di>
+							</div>
+						</div>
+					</div>
+			</div>
+					<!--个人资料-->
+					<div class="file-nav">
+						<span class="no1">个人资料</span>
+						<span class="no2">账号关联</span>
+						<span class="no3">邮件设置</span>
+					</div>
+					<div class="file-body">
+						<div class="file-content">
+							<h1>个人资料</h1>
+							<ul>
+								<li>
+									<span>头像</span>
+									<div class="userscontent">
+										<div class="header-pic"></div><!--用来放图片-->
+										<div class="usertext">
+											<div class="article">
+												<p>
+													<label class="chance">请选择一个图像文件：</label>
+													<input type="file" id="file_input" class="upline"/>
+													<button class="upline">上传图片</button>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span>昵称</span>
+									<div class="change">
+										<div class="change-input">
+											<input type="text" placeholder="填写你的昵称"/>
+											<div class="dochange"><span>修改</span></div>
+											<div class="changed"><span class="preserve">保存</span><span>取消</span></div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span>职位</span>
+									<div class="change">
+										<div class="change-input">
+											<input type="text" placeholder="填写你的职位"/>
+											<div class="dochange"><span>修改</span></div>
+											<div class="changed"><span class="preserve">保存</span><span>取消</span></div>
+										</div
+									</div>
+								</li>
+								<li>
+									<span>公司</span>
+									<div class="change">
+										<div class="change-input">
+											<input type="text" placeholder="填写你的公司"/>
+											<div class="dochange"><span>修改</span></div>
+										<div class="changed"><span class="preserve">保存</span><span>取消</span></div>
+									</div>
+								</li>
+								<li>
+									<span>个人介绍</span>
+									<div class="change">
+										<div class="change-input">
+											<input type="text" placeholder="填写职业技能、擅长的事情、喜欢的事情等"/>
+											<div class="dochange"><span>修改</span></div>
+										<div class="changed"><span class="preserve">保存</span><span>取消</span></div>
+									</div>
+								</li>
+								<li>
+									<span>个人主页</span>
+									<div class="change">
+										<div class="change-input">
+											<input type="text" placeholder="填写你的个人主页"/>
+											<div class="dochange"><span>修改</span></div>
+										<div class="changed"><span class="preserve">保存</span><span>取消</span></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+		</div>
+		<script type="text/javascript" src="../routes/profile.js"></script>
+		<script type="text/javascript" src="../routes/onloadpic.js"></script>
+		<script type="text/javascript" src="../routes/profiletoast.js"></script>
+	</body>
+
+</html>
