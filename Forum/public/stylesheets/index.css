@@ -97,8 +97,8 @@
 .ico-arrow-down-b{
     width:.15rem;
     height:.15rem;
-     background: url(../../images/jian.png) no-repeat;
-     background-size:.15rem .15rem;
+    background: url(../../images/jian.png) no-repeat;
+    background-size:.15rem .15rem;
 }
   /* 未登录时右侧 */
 .athor{
@@ -464,8 +464,3 @@
     margin-left: .2em;
     font-weight: 700;
 }
-
-
-
-
-
