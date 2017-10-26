@@ -69,4 +69,14 @@
            lock=true;
        }
     });
+
+    console.log($('.item2'));
+
+        
+
+    $.get("/index",data,function(data){
+       console.log(data);
+    })
+ 
+
 })()
