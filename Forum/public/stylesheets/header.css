@@ -1,0 +1,201 @@
+#header{
+    width:100%;
+    height:0.6rem;
+    background:#fff;
+    position:fixed;
+    border-bottom:1px solid #ccc;
+    display:-webkit-box;
+}
+.container{
+	width:99%;
+	margin:auto;
+	height:100%;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+	align-items: center;
+	position:absolute;
+}
+
+.logo{
+    margin-left:.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    display:block;
+    height:.41rem;
+    width:.98rem;
+    background:url(../../images/logo.png) no-repeat;
+    background-size:.98rem .41rem;
+}
+.main-nav{
+    height:100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    padding-left:.1rem;
+}
+ .nav-list{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    position:relative;
+ }
+ .nav-list li{
+    float:left;
+    text-align: -webkit-match-parent;
+    list-style:none; 
+ }
+
+.main-nav-list{
+    width:1rem;
+    height:100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+}
+.show-menu{
+    height: .6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #007fff;
+    font-size: .15rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 .05rem;
+   }
+.ico-arrow-down-b{
+    width:.15rem;
+    height:.15rem;
+    background: url(../../images/jian.png) no-repeat;
+    background-size:.15rem .15rem;
+}
+  /* 未登录时右侧 */
+.athor{
+    color: #007fff;
+    padding: 0 .05rem;
+    font-size: .15rem;
+    position:absolute;
+    right:0;
+     /* display:none; */
+} 
+ .athor span{
+   margin-right:.03rem;
+  }
+  
+  /* 用户登录之后 */
+  .loginon{
+    color: #007fff;
+    padding: 0 .05rem;
+    font-size: .15rem;
+    position:absolute;
+    right:0;
+    display: flex;
+    display:none;
+  }
+  .loginon a{
+      display:block;
+      margin-top:3px;
+      width:.18rem;
+      height:.24rem;
+      background:url(../../images/ring.png) no-repeat;
+      background-size:.18rem .24rem;
+    }
+  .userimg{
+      margin-left:.25rem;
+      width:.3rem;
+      height:.3rem;
+      border-radius:50%;
+      background:#f1f1f1;
+  }
+     .userimg img{
+         width:100%;
+         height:100%;
+     }
+     /* 页面导航下拉菜单 */
+     .show-down-box{
+          width:.94rem;
+          height:2.42rem;
+          display:none;
+          position: absolute;
+          z-index:9; 
+          background-color: #fff;
+     }
+   .show-down{
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+    border: 1px solid hsla(217,5%,71%,.45);
+    border-radius: 4px;
+    font-size: .16rem;
+    width:.94rem;
+    height:2.42rem;
+   }  
+   .show-down li{
+       width:100%;
+       height:.48rem;
+       line-height:.48rem;
+       text-align:center;
+   }
+   .show-down li a{
+       text-decoration: none;
+       color:#ccc;
+   }
+   .show-down .current a{
+       color:#007fff;
+   }
+
+/* 个人中心下拉 */
+.show-personal-down{
+  display: block;
+  width: 1.3rem;
+  border: 1px solid hsla(217,5%,71%,.45);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin-right: 3px;
+  position: absolute;
+  z-index:9;
+  top: .6rem;
+  right: 0;
+  background:#fff;
+  display: none;
+}
+.show-personal-down ul{
+    width: 1.3rem;
+}
+.show-personal-down ul li {
+	list-style: none;
+	width: 100%;
+	height: 0.32rem;
+	font-size: 0.16rem;
+	color: #b2bac2;
+}
+.show-personal-down ul li a {
+	display: block;
+	padding: .06rem .1rem;
+}
+.show-personal-down ul li a i {
+	float: left;
+}
+.show-personal-down ul li a i img {
+	width: .18rem;
+	margin-right: .1rem;
+}
+.show-personal-down ul li a span {
+	display: block;
+	float: left;
+}
+.li-line {
+	border-bottom: 1px solid rgba(0,0,0,.04);
+}
