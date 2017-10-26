@@ -176,7 +176,12 @@
               <h2>热门文章</h2>
          </div>
          <ul class="hot-list">
-             <li><a href="#">浅谈前端和移动端的事件机制</a></li>
+           <!-- <% for(var k=0;k<data.length;k++){%> -->
+             <li><a href="#">
+              <!-- <%=question[i]%> -->
+              浅谈前端和移动端的事件机制
+              </a></li>
+             <!-- <%}%> -->
          </ul>
       </div>
 
@@ -200,6 +205,7 @@
                   </div>
               </div> 
              <ul class="entry-list">
+               <!-- <% for(var i=0;i<data.length;i++) { %> -->
                <li class="entry-item">
                   <div class="entry">
                       <a href="/" class="entry-link">
@@ -207,11 +213,13 @@
                            <div class="info-box">
                                      <div class="info-row meta-row">
                                          <a href="/">
+                                          <!-- <%= username[i]%> -->
                                           伢语
                                         </a>
                                      </div>
                                      <div class="info-row title-row">
                                          <a href="/"class="title">
+                                          <!-- <%= question[i]%> -->
                                             JavaScript专题系列20篇正式完结！
                                         </a>
                                      </div>
@@ -220,13 +228,19 @@
                                             <li class="item2 like">
                                                 <a href="#" class="title-box">
                                                     <img class="icon icon-like" src="../images/like.png" alt="">
-                                                    <span class="count">259</span>
+                                                    <span class="count">
+                                                      <!-- <%=up[i]%> -->
+                                                      259
+                                                    </span>
                                                 </a>
                                             </li>
                                             <li class="item2 comment">
                                                     <a href="#" class="title-box">
                                                         <img class="icon" src="../images/comment.png" alt="">
-                                                        <span class="count">259</span>
+                                                        <span class="count">
+                                                        <!-- <%=commment[i]%> -->
+                                                          259
+                                                        </span>
                                                     </a>   
                                              </li>
                                             </ul>
@@ -236,6 +250,7 @@
                                 </a>
                               </div>
                              </li>
+                             <!-- <%} %> -->
                             </ul>
                      </div>
                  </div>        
