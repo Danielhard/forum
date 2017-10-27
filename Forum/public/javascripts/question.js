@@ -76,11 +76,11 @@
       time: new Date().getTime()
     };
     if(data.title == ''||data.tag == ''||data.content == ''){
-      alert("您有未填写项目，发布失败",1000);
+      alert("您有未填写项目，发布失败",800);
       return;
     }else {console.log(data["tag"]);
       $.post("/sendQuestion/subProblem",data,function (data) {
-        alert(data,1000);
+        alert(data,800);
       })}
   });
 })();
