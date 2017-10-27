@@ -12,7 +12,6 @@ let register = require('./routes/register');
 let personalCenter = require('./routes/personalCenter');
 let problemDetail = require('./routes/problemDetail');
 let sendQuestion = require('./routes/sendQuestion');
-
 var app = express();
 
 var session = require('express-session');

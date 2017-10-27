@@ -8,10 +8,12 @@
   var selectedBoxLi = document.querySelectorAll('#select-box li');
   var selectedBoxDiv = document.querySelectorAll('#tag-select-box div');
 
+  // 标签栏下拉选择框
   tagText.addEventListener("touchstart",function () {
     selectedBox.style.display = "block";
   });
 
+  // 获取标签选项列表，且绑定对应子标签
   for(var i=0;i<selectedBoxLi.length;i++){
     (function (i) {
       selectedBoxLi[i].addEventListener("touchstart",function () {
@@ -27,6 +29,7 @@
     })(i)
   }
 
+  // 标签选取后在显示框内显示
   for(var j=1;j<selectedBoxDiv.length;j++){
     (function (j) {
       var arrLi =selectedBoxDiv[j].querySelectorAll('li');
@@ -45,6 +48,7 @@
     })(j);
   }
 
+  // 点击标签栏及选择框外任意地方收回选择框
     document.addEventListener("touchstart",function (e) {
       event=event||window.event;
       var target = event.target;
@@ -60,6 +64,7 @@
 
     });
 
+  // ajax上传
   upload.addEventListener("touchstart",function () {
     var collection=$("#tag-text span").text().split("x");
     collection.splice($.inArray('',collection),1);

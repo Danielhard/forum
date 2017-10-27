@@ -166,19 +166,17 @@
 
         <div class="hot">
           <div class="hot-header">
-            <h2>热门文章</h2>
-          </div>
-          <ul class="hot-list">
-            <!-- <% for(var k = 0;k < data.length;k++){ %> -->
-            <li>
-              <a href="#">
-                <!-- <%= question[i] %> -->
-                浅谈前端和移动端的事件机制
-              </a>
-            </li>
-            <!-- <% } %> -->
-          </ul>
-        </div>
+              <h2>热门文章</h2>
+         </div>
+         <ul class="hot-list">
+         
+             <li><a href="#">
+        
+              浅谈前端和移动端的事件机制
+              </a></li>
+            
+         </ul>
+      </div>
 
 
         <!-- end -->
@@ -186,88 +184,82 @@
 
       <!-- 登陆后中心     -->
       <div class="comment-block">
-        <div class="comment-nav">
-          <a href="/">前端</a>
-        </div>
-        <div class="online-entry-list">
-          <div class="online-header">
-            <div class="online-nav">
-              <ul class="linenav-list">
-                <li class="line-nav-item">
-                  <a href="#" class="current2">热门</a>
-                </li>
-                <li class="line-nav-item">
-                  <a href="#">最新</a>
-                </li>
-                <li class="line-nav-item ">
-                  <a href="#">评论</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <ul class="entry-list">
-            <% for(var i = 0;i < data.length;i++) { %>
-              <li class="entry-item">
-                <div class="entry">
-                  <a href="/" class="entry-link">
-                    <div class="content-box">
-                      <div class="info-box">
-                        <div class="info-row meta-row">
-                          <a href="/">
-                            <%= username[i] %>
-                              伢语
-                          </a>
-                        </div>
-                        <div class="info-row title-row">
-                          <a href="/" class="title">
-                            <%= question[i] %>
-                              JavaScript专题系列20篇正式完结！
-                          </a>
-                        </div>
-                        <div class="info-row action-row">
-                          <ul class="action-list">
-                            <li class="item2 like">
-                              <a href="#" class="title-box">
-                                <img class="icon icon-like" src="../images/like.png" alt="">
-                                <span class="count">
-                                  <%= up[i] %>
-                                    259
-                                </span>
-                              </a>
-                            </li>
-                            <li class="item2 comment">
-                              <a href="#" class="title-box">
-                                <img class="icon" src="../images/comment.png" alt="">
-                                <span class="count">
-                                  <%= commment[i] %>
-                                    259
-                                </span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </li>
-              <% } %>
-          </ul>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- Button trigger modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <span id="err" class="err"></span>
-      <span class="suc" id="suc"></span>
-      <!-- 登录 -->
-      <div class="modal-dialog" role="document" id="login">
-        <img src="./images/1.png" alt="" class="login-img" id="login-img1">
-        <img src="./images/2.png" alt="" class="login-img" id="login-img2">
-        <img src="./images/3.png" alt="" class="login-img" id="login-img3">
-        <div class="modal-content">
-          <!-- <form action="/login" method="POST"> -->
+          <div class="comment-nav">
+            <a href="/">前端</a>     
+          </div>   
+         <div class="online-entry-list"> 
+              <div class="online-header">
+                  <div class="online-nav">
+                      <ul class="linenav-list">
+                          <li class="line-nav-item"><a href="#" class="current2">热门</a></li>
+                          <li class="line-nav-item"><a href="#">最新</a></li>
+                          <li class="line-nav-item "><a href="#">评论</a></li>
+                      </ul>
+                  </div>
+              </div> 
+             <ul class="entry-list">
+        <% for(var i=0;i<result.length;i++){%>
+               <li class="entry-item">
+                  <div class="entry">
+                      <a href="/" class="entry-link">
+                        <div class="content-box">
+                           <div class="info-box">
+                                     <div class="info-row meta-row">
+                                         <a href="/">
+                                        
+                                         <%=result[i].username %>
+                                        </a>
+                                     </div>
+                                     <div class="info-row title-row">
+                                         <a href="/"class="title">
+                                            <%=result[i].title %>
+                                           
+                                        </a>
+                                     </div>
+                                     <div class="info-row action-row">
+                                         <ul class="action-list">
+                                            <li class="item2 like">
+                                                <a href="#" class="title-box">
+                                                    <img class="icon icon-like" src="../images/like.png" alt="">
+                                                    <span class="count">
+                                                        <%=result[i].up %>
+                                                      259
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="item2 comment">
+                                                    <a href="#" class="title-box">
+                                                        <img class="icon" src="../images/comment.png" alt="">
+                                                        <span class="count">
+                                                            <%=result[i].comment %>
+                                                          259
+                                                        </span>
+                                                    </a>   
+                                             </li>
+                                            </ul>
+                                     </div>
+                                  </div>
+                                 </div>
+                                </a>
+                              </div>
+                             </li>
+                           <%}%> 
+                            </ul>
+                     </div>
+                 </div>        
+   
+     </div>
+  </div>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <span id="err" class="err"></span>
+    <span class="suc" id="suc"></span>
+    <!-- 登录 -->
+    <div class="modal-dialog" role="document" id="login">
+      <img src="./images/1.png" alt="" class="login-img" id="login-img1">
+      <img src="./images/2.png" alt="" class="login-img" id="login-img2">
+      <img src="./images/3.png" alt="" class="login-img" id="login-img3">
+      <div class="modal-content">
+        <!-- <form action="/login" method="POST"> -->
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -286,13 +278,13 @@
               <a href="#" class="forgetpassword">忘记密码</a>
             </span>
           </div>
-          <!-- </form> -->
-        </div>
+        <!-- </form> -->
       </div>
-      <!-- 注册 -->
-      <div class="modal-dialog" role="document" id="register">
-        <div class="modal-content">
-          <!-- <form action="/register" method="post" onsubmit="return checkout()"> -->
+    </div>
+    <!-- 注册 -->
+    <div class="modal-dialog" role="document" id="register">
+      <div class="modal-content">
+        <!-- <form action="/register" method="post" onsubmit="return checkout()"> -->
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -305,24 +297,21 @@
             <input type="password" autocomplete="off" placeholder="确认密码" id="confirm-password">
           </div>
           <div class="modal-footer">
-            <input type="submit" class="btn btn-default" id="ReBtn" value="注册" />
+            <input type="submit" class="btn btn-default" id="ReBtn" value="注册"/>
             <span class="login-bottom">
               <a href="#" id="loginBtn">已有登陆账号</a>
             </span>
           </div>
-          <!-- </form> -->
-        </div>
+        <!-- </form> -->
       </div>
     </div>
-
-
   </div>
 
-</body>
-<script src="/Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
-<script src="/Plug-in/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="/javascripts/loginAndRegister.js"></script>
-<script src="/javascripts/index.js"></script>
-<script src="/javascripts/login.js"></script>
-
+  </body>
+  <script src="/Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+  <script src="/Plug-in/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script src="/javascripts/loginAndRegister.js"></script>
+  <script src="/javascripts/index.js"></script>
+  <script src="/javascripts/login.js"></script>
+  <script src="/Plug-in/bootstrap-3.3.7-dist/js/underscore-noflect.js></script>
 </html>
