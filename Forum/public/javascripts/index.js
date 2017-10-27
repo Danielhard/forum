@@ -9,17 +9,17 @@
    var oLike=document.querySelector('.like');
     var flag=true ,lock=true,trag=true;
   
-   oLike.addEventListener('touchstart',function(){
-       if(trag===false){
-             this.querySelector('img').src="../images/like.png";
-             this.querySelector('.count').style.color="#ccc";
-             trag=true;
-       }else{
-            this.querySelector('img').src="../images/bluelike.png";
-            this.querySelector('.count').style.color="yellowgreen";
-            trag=false;
-         }
-     }) 
+//    oLike.addEventListener('touchstart',function(){
+//        if(trag===false){
+//              this.querySelector('img').src="../images/like.png";
+//              this.querySelector('.count').style.color="#ccc";
+//              trag=true;
+//        }else{
+//             this.querySelector('img').src="../images/bluelike.png";
+//             this.querySelector('.count').style.color="yellowgreen";
+//             trag=false;
+//          }
+//      }) 
    for(var i=0;i<oLi.length;i++){
        (function(i){
           oLi[i].addEventListener('touchstart',function(){
@@ -70,13 +70,9 @@
        }
     });
 
-    console.log($('.item2'));
-
+ 
         
 
-    $.get("/index",data,function(data){
-       console.log(data);
-    })
- 
+    
 
 })()
