@@ -15,6 +15,16 @@ let sendQuestion = require('./routes/sendQuestion');
 
 var app = express();
 
+var session = require('express-session');
+
+//使用session
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true
+}));
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

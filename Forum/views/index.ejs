@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="stylesheet" href="/Plug-in/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-  </head>
-  <body>
-      <button type="button" id="loginBtn" class="btn btn-primary" data-toggle="modal" data-target="#loginAndRegister" data-whatever="@mdo">登录</button>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="/Plug-in/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/base.css">
+  <link rel="stylesheet" href="/stylesheets/index.css">
+  <link rel="stylesheet" href="/stylesheets/login.css">
+
+</head>
+
+<body>
+  <!-- <button type="button" id="loginBtn" class="btn btn-primary" data-toggle="modal" data-target="#loginAndRegister" data-whatever="@mdo">登录</button>
       <button type="button" id="registerBtn" class="btn btn-primary" data-toggle="modal" data-target="#loginAndRegister" data-whatever="@mdo">注册</button>
 
       <div class="modal fade" id="loginAndRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -55,9 +63,202 @@
               </div>
             </div>
         </div>
+      </div> -->
+
+
+  <div id="header">
+    <div class="container">
+      <a href="/" class="logo"></a>
+      <div class="main-nav">
+        <ul class="nav-list">
+          <li class="main-nav-list">
+            <div class="show-menu">
+              <span>首页</span>
+              <div class="icon ico-arrow-down-b"></div>
+            </div>
+            <!-- 首页按钮下拉菜单 -->
+
+          </li>
+          <li class="nav-item athor">
+            <span>
+              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="Lobutton">登录</button>
+            </span>
+            <b>·</b>
+            <span>
+              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="rebutton">注册</button>
+            </span>
+          </li>
+          <li class="nav-item loginon">
+            <a href="#"></a>
+            <div class="userimg">
+              <img src="" alt="">
+            </div>
+          </li>
+        </ul>
+        <div class="show-down-box">
+          <ul class="show-down">
+            <li class="current">
+              <a>首页</a>
+            </li>
+            <li>
+              <a>专栏</a>
+            </li>
+            <li>
+              <a>收藏集</a>
+            </li>
+            <li>
+              <a>发现</a>
+            </li>
+            <li>
+              <a>开源库</a>
+            </li>
+          </ul>
+        </div>
+        <div class="show-personal-down">
+          <ul>
+            <li>
+              <a>
+                <i>
+                  <img src="images/write.png" />
+                </i>
+                <span>写文章</span>
+              </a>
+            </li>
+            <li class="li-line">
+              <a>
+                <i>
+                  <img src="images/draft.png" />
+                </i>
+                <span>草稿</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i>
+                  <img src="images/mypage.png" />
+                </i>
+                <span>我的主页</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i>
+                  <img src="images/problem.png" />
+                </i>
+                <span>我的问题</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i>
+                  <img src="images/collection.png" />
+                </i>
+                <span>我的收藏</span>
+              </a>
+            </li>
+            <li class="li-line">
+              <a>
+                <i>
+                  <img src="images/label.png" />
+                </i>
+                <span>标签管理</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i>
+                  <img src="images/set.png" />
+                </i>
+                <span>设置</span>
+              </a>
+            </li>
+            <li class="li-line">
+              <a>
+                <i>
+                  <img src="images/about.png" />
+                </i>
+                <span>关于</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <i>
+                  <img src="images/loginout.png" />
+                </i>
+                <span>登出</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
       </div>
-   </body>
-  <script src="/Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
-  <script src="/Plug-in/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-  <script src="/javascripts/loginAndRegister.js"></script>
+    </div>
+  </div>
+  <!-- Button trigger modal -->
+  <!--
+-->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <span id="err" class="err"></span>
+    <span class="suc" id="suc"></span>
+    <!-- 登录 -->
+    <div class="modal-dialog" role="document" id="login">
+      <img src="./images/1.png" alt="" class="login-img" id="login-img1">
+      <img src="./images/2.png" alt="" class="login-img" id="login-img2">
+      <img src="./images/3.png" alt="" class="login-img" id="login-img3">
+      <div class="modal-content">
+        <!-- <form action="/login" method="POST"> -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">登录</h4>
+          </div>
+          <div class="modal-body">
+            <input type="text" autocomplete="off" placeholder="请输入账号" class="account" id="account" name="username">
+            <input type="password" placeholder="请输入密码" class="password" id="login-password" name="password">
+          </div>
+          <div class="modal-footer">
+            <input type="submit" class="btn btn-default" id="LoBtn" value="登录">
+            <span class="login-bottom">
+              <p>没有账号？</p>
+              <a href="#" class="register" id="registerBtn">注册</a>
+              <a href="#" class="forgetpassword">忘记密码</a>
+            </span>
+          </div>
+        <!-- </form> -->
+      </div>
+    </div>
+    <!-- 注册 -->
+    <div class="modal-dialog" role="document" id="register">
+      <div class="modal-content">
+        <!-- <form action="/register" method="post" onsubmit="return checkout()"> -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">注册</h4>
+          </div>
+          <div class="modal-body">
+            <input type="text" autocomplete="off" placeholder="请输入账号" class="account" id="register-account" name="username">
+            <input type="password" autocomplete="off" placeholder="请输入密码" class="password" id="register-password" name="password">
+            <input type="password" autocomplete="off" placeholder="确认密码" id="confirm-password">
+          </div>
+          <div class="modal-footer">
+            <input type="submit" class="btn btn-default" id="ReBtn" value="注册"/>
+            <span class="login-bottom">
+              <a href="#" id="loginBtn">已有登陆账号</a>
+            </span>
+          </div>
+        <!-- </form> -->
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<script src="/Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+<script src="/Plug-in/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/loginAndRegister.js"></script>
+<script src="/javascripts/login.js"></script>
+
 </html>
