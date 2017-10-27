@@ -76,7 +76,7 @@
                     <i>
                       <img src="../images/write.png" />
                     </i>
-                    <span>写文章</span>
+                    <span class="quiz">写文章</span>
                   </a>
                 </li>
                 <li class="li-line">
@@ -140,7 +140,7 @@
                     <i>
                       <img src="../images/loginout.png" />
                     </i>
-                    <span>登出</span>
+                    <span class="logout">登出</span>
                   </a>
                 </li>
               </ul>
@@ -184,7 +184,7 @@
       <!-- 登陆后中心     -->
       <div class="comment-block">
           <div class="comment-nav">
-            <a href="/">前端</a>     
+            <a href="#">前端</a>     
           </div>   
          <div class="online-entry-list"> 
               <div class="online-header">
@@ -200,17 +200,17 @@
         <% for(var i=0;i<result.length;i++){%>
                <li class="entry-item">
                   <div class="entry">
-                      <a href="/" class="entry-link">
+                      <a href="#" class="entry-link">
                         <div class="content-box">
                            <div class="info-box">
                                      <div class="info-row meta-row">
-                                         <a href="/">
+                                         <a href="#">
                                         
                                          <%=result[i].username %>
                                         </a>
                                      </div>
                                      <div class="info-row title-row">
-                                         <a href="/"class="title">
+                                         <a href="#"class="title">
                                             <%=result[i].title %>
                                            
                                         </a>
@@ -310,6 +310,7 @@
   <script src="/Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
   <script src="/Plug-in/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
   <script src="/javascripts/loginAndRegister.js"></script>
+  <script src="/javascripts/header.js"></script>
   <script src="/javascripts/index.js"></script>
   <script src="/javascripts/login.js"></script>
   <script src="/Plug-in/bootstrap-3.3.7-dist/js/underscore-noflect.js></script>

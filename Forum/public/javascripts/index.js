@@ -4,7 +4,7 @@
    var oshowDown=document.querySelector(".show-down-box");
    var oshowMenu=document.querySelector(".show-menu");
    var oCommentBlock=document.querySelector(".comment-block");
-   var oLi=oshowDown.querySelectorAll("li");
+  
    var oSpan=document.querySelector(".linenav-list").querySelectorAll('a');
    var oLike=document.querySelector('.like');
     var flag=true ,lock=true,trag=true;
@@ -20,16 +20,7 @@
 //             trag=false;
 //          }
 //      }) 
-   for(var i=0;i<oLi.length;i++){
-       (function(i){
-          oLi[i].addEventListener('touchstart',function(){
-            for(var j=0;j<oLi.length;j++){
-                oLi[j].className="";
-            }
-            oLi[i].className="current";
-          })          
-       })(i)
-    }    
+  
    for(var k=0;k<oSpan.length;k++){
        (function(k){
          oSpan[k].addEventListener("touchstart",function(){
