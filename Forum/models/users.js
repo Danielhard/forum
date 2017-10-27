@@ -15,7 +15,7 @@ userSchema = new mongoose.Schema({
 userSchema.statics.insertData = operationDBUsers.insertData;
 userSchema.statics.findUser = operationDBUsers.find;
 userSchema.statics.updateData = operationDBUsers.update;
-userSchema.static.deleted = operationDBUsers.deleted;
+userSchema.statics.deleted = operationDBUsers.deleted;
 
 let users = db.model('users',userSchema);
 module.exports = users;

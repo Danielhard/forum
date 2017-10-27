@@ -1,0 +1,139 @@
+
+li{
+  list-style: none;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  font-size: 100px;
+}
+.quiz-box{
+
+  width: 100%;
+  height: 100%;
+  font-size: 0.14rem;
+  background-color:#f3f3f3;
+  overflow: hidden;margin-bottom: 0.34rem;
+}
+.title-box{
+  margin-top: 0.6rem;
+  padding: 15px 15px;
+}
+.title{
+  height: 0.46rem;
+  width: 100%;
+  line-height: 0.46rem;
+  font-size: 0.18rem;
+  padding-left: 0.15rem;
+  border: 1px solid #999999;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+}
+.tag-box,.quiz-content{
+  padding:0 15px;
+  margin-bottom: 0.15rem;
+}
+.tag-text{
+  line-height: 0.25rem;
+  padding: 5px 0 5px 15px;
+  height: 0.4rem;
+  width: 100%;
+  border-radius:4px;
+  border: 1px solid #999999;
+  background-color: white;
+  cursor: text;
+  box-sizing: border-box;
+}
+.tag-select-box{
+  display: none;
+  box-shadow: 0 0.06rem 0.12rem 0 rgba(0,0,0,0.18);
+  width: 78%;
+  padding: 0.15rem;
+  border: 1px solid #999;
+  background-color: white;
+  position: absolute;
+}
+.label-head{
+  float: left;
+  font-size: 0.12rem;
+  border-radius: 3px;
+  padding: 0.05rem 0.06rem ;
+  margin-right: 0.05rem;
+  background-color: white;
+  color: #666;
+}
+.selected{
+  background-color: #007fff;
+  color: white;
+}
+.select-box{
+  width: 100%;
+  height: 0.4rem;
+  margin-bottom: 0.1rem;
+}
+.platform-framework,.system-device,.server,.database-and-cache,.development-tool,.other{
+  display: none;
+}
+.down{
+  display: inline-block;
+  padding: 0 0.08rem;
+  color: #007fff;
+  background-color: rgba(0,127,255,0.08);
+  height: 0.24rem;
+  font-size: 0.13rem;
+  line-height: 0.24rem;
+  text-align: center;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.up{
+  color:white;
+  background-color:#007fff;
+}
+.content{
+  box-sizing: border-box;
+  padding: 0.06rem 0.12rem;
+  width: 100%;
+  height: 4.08rem;
+  border: 1px solid #999;
+  outline:none;
+  resize:none;
+  border-radius:5px;
+}
+.quiz-foot-box{
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  height: 0.54rem;
+  border-top: 1px solid #999999;
+  background-color: white;
+}
+.quiz-foot{
+  height: 0.34rem;
+  padding: 10px 15px;
+  font-size:0.14rem;
+}
+.upload{
+  text-decoration: none;
+  color:white;
+  background-color:#007fff;
+  display: inline-block;
+  padding: 6px 12px;
+  border-color: #008151;
+  height: 0.2rem;
+  border-radius: 5px;
+  float: right;
+}
+.delete{
+  display: inline-block;
+  color:#007fff;
+  background-color: rgba(0,127,255,0.08);
+  text-align: center;
+  margin-right: 0.05rem;
+  padding: 0.05rem 0.08rem;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+

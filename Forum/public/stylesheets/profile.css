@@ -1,0 +1,133 @@
+html {
+	width: 100%;
+	height: 60rem;
+}
+.file-nav {
+	width: 100%;
+	height: .46rem;
+	background-color: #FFFFFF;
+	position: relative;
+	top: .6rem;
+}
+.file-nav span {
+	font-size: .14rem;
+	/*width: 33.33%;
+	height: 100%;*/
+	text-align: center;
+	/*line-height: 100%;*/
+	position: absolute;
+}
+.no1 {
+	top: .15rem;
+	left: .2rem;
+	color: #007FFF;
+}
+.no2 {
+	top: .15rem;
+	left: 1rem;
+}
+.no3 {
+	top: .15rem;
+	left: 1.8rem;
+}
+.file-body {
+	width: 100%;
+	margin-top: .7rem;
+	background-color: #FFFFFF;
+}
+.file-content {
+	width: 94%;
+	padding: 3%;
+}
+.file-content h1 {
+	font-size: .24rem;
+	font-weight: 600;
+	padding: .2rem 0 .1rem;
+}
+.file-content>ul>li {
+	width: 100%;
+	border-top: 1px solid #f1f1f1;
+}
+.file-content>ul>li>span {
+	font-size: .15rem;
+	display: block;
+	padding: .1rem 0 .05rem;
+}
+.article {
+	width: 100%;
+	height: .2rem;
+	font-size: .12rem;
+}
+.article p {
+	margin: .1rem;
+}
+.userscontent {
+	width: 100%;
+	height: 1rem;
+}
+.header-pic {
+	width: 25%;
+	height: 100%;
+	float: left;
+	/*margin: .1rem;*/
+}
+.header-pic img{
+	width: 90%;
+	height: 90%;
+	margin: 5%;
+}
+.usertext {
+	width: 75%;
+	height: 100%;
+	float: left;
+}
+.chance {
+	font-size: .14rem;
+	padding-bottom: .1rem;
+	display: block;
+}
+.upline {
+	font-size: .12rem;
+	color: #FFFFFF;
+	background-color: #007FFF;
+	margin: .05rem 0 0;
+	padding: .02rem .1rem;
+	border: none;
+	outline: none;
+	border-radius: 3px;
+}
+.change {
+	width: 100%;
+	height: .7rem;
+}
+.change-input {
+	width: 100%;
+	height: 100%;
+}
+.change-input input {
+	width: 75%;
+	margin-top: .2rem ;
+	height: .2rem;
+	float: left;
+	border: none;
+	outline: none;
+}
+.change-input div{
+	float: right;
+	margin: .22rem .1rem 0 0;
+	font-size: .15rem;
+}
+.dochange {
+	color: #007FFF;
+	display: block;
+}
+.changed {
+	display: none;
+}
+/*.changed span{
+	margin-right: .05rem;
+}*/
+.preserve {
+	color: #007FFF;
+	margin-right: .05rem;
+}
