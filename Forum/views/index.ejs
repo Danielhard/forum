@@ -249,11 +249,68 @@
    
      </div>
   </div>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <span id="err" class="err"></span>
+    <span class="suc" id="suc"></span>
+    <!-- 登录 -->
+    <div class="modal-dialog" role="document" id="login">
+      <img src="./images/1.png" alt="" class="login-img" id="login-img1">
+      <img src="./images/2.png" alt="" class="login-img" id="login-img2">
+      <img src="./images/3.png" alt="" class="login-img" id="login-img3">
+      <div class="modal-content">
+        <!-- <form action="/login" method="POST"> -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">登录</h4>
+          </div>
+          <div class="modal-body">
+            <input type="text" autocomplete="off" placeholder="请输入账号" class="account" id="account" name="username">
+            <input type="password" placeholder="请输入密码" class="password" id="login-password" name="password">
+          </div>
+          <div class="modal-footer">
+            <input type="submit" class="btn btn-default" id="LoBtn" value="登录">
+            <span class="login-bottom">
+              <p>没有账号？</p>
+              <a href="#" class="register" id="registerBtn">注册</a>
+              <a href="#" class="forgetpassword">忘记密码</a>
+            </span>
+          </div>
+        <!-- </form> -->
+      </div>
+    </div>
+    <!-- 注册 -->
+    <div class="modal-dialog" role="document" id="register">
+      <div class="modal-content">
+        <!-- <form action="/register" method="post" onsubmit="return checkout()"> -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">注册</h4>
+          </div>
+          <div class="modal-body">
+            <input type="text" autocomplete="off" placeholder="请输入账号" class="account" id="register-account" name="username">
+            <input type="password" autocomplete="off" placeholder="请输入密码" class="password" id="register-password" name="password">
+            <input type="password" autocomplete="off" placeholder="确认密码" id="confirm-password">
+          </div>
+          <div class="modal-footer">
+            <input type="submit" class="btn btn-default" id="ReBtn" value="注册"/>
+            <span class="login-bottom">
+              <a href="#" id="loginBtn">已有登陆账号</a>
+            </span>
+          </div>
+        <!-- </form> -->
+      </div>
+    </div>
+  </div>
 
-    </body>
+  </body>
   <script src="/Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
   <script src="/Plug-in/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
   <script src="/javascripts/loginAndRegister.js"></script>
   <script src="/javascripts/index.js"></script>
+  <script src="/javascripts/login.js"></script>
   <script src="/Plug-in/bootstrap-3.3.7-dist/js/underscore-noflect.js></script>
 </html>

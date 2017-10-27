@@ -113,6 +113,7 @@
       height:.24rem;
       background:url(../../images/ring.png) no-repeat;
       background-size:.18rem .24rem;
+      float: left;
     }
   .userimg{
       margin-left:.25rem;
@@ -120,6 +121,7 @@
       height:.3rem;
       border-radius:50%;
       background:#f1f1f1;
+      float: right;
   }
      .userimg img{
          width:100%;

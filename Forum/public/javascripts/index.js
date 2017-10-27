@@ -69,15 +69,5 @@
            lock=true;
        }
     });
-        
-    //  $.get('/', {}, function(data){
-    //         console.log(data);
-    //         // var data=JSON.parse(data);
-    //         // for(var i=0;i<data.length;i++){
-    //         //    var json=data[i];
-             
 
-    //         // }
-    //     }
-    //  );
-   })()
+})()
