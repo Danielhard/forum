@@ -2,7 +2,7 @@
 	var Change = document.querySelectorAll('.change-input');
 	var doChange = document.querySelectorAll('.dochange');
 	var Changed = document.querySelectorAll('.changed');
-	var Oinput = document.querySelectorAll('input');
+	var Oinput = document.querySelectorAll('input[name=contextdetail]');
 	console.log(Oinput);
 
 	for(var i = 0; i < doChange.length; i++) {

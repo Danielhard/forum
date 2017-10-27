@@ -9,8 +9,8 @@ router.get('/', (req,res) => {
 
 
 router.post("/subProblem",(req,res) => {
-  console.log(req.query);
-  let {username,title,tag,content,time} = req.body;
+  let {username,title,content,time} = req.body;
+  let tag = req.body['tag[]'];
   question.insertData('questions',{username,title,tag,content,time},function (err,result) {
     if(err){
       res.send("问题未能成功发布");

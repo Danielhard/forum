@@ -52,14 +52,19 @@ router.post('/',(req,res) => {
            
             // 叶家辉：如果注册成功那么创建一个用户信息的空集合
             let data = {
-                userid : result._id,
-                username : username,
-                headPic : '',
-                age : 20,
-                sex : '',
-                birthday : 0000-00-00,
-                myquestion : [],
-                bestLike : []
+                userid           : result._id,
+                username         : username,
+                headPic          : '',
+                age              : 20,
+                sex              : '',
+                birthday         : 0000-00-00,
+                nickname         : '',
+                job              : '',
+                company          : '',
+                selfIntroduction : '',
+                personalWebsite  : '',
+                myquestion       : [],
+                bestLike         : []
             }
             userInfor.insertData('userInfor',data,function(err,result) {
                 console.log(result);
