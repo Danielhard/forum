@@ -30,7 +30,7 @@ function find(collectionName,data,callback) {
  * @param {* 回调函数} callback 
  */
 function update(collectionName,condition,data,option,callback) {
-    let option = option || {multi: true};                     // 默认允许更新多个
+    // let option = option || {multi: true};                     // 默认允许更新多个
     this.model(collectionName).update(condition,data,option,callback);
 }
 
