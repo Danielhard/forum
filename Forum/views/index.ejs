@@ -169,12 +169,11 @@
               <h2>热门文章</h2>
          </div>
          <ul class="hot-list">
-         
+         <%for(var i=0;i<result.length;i++){%>
              <li><a href="#">
-        
-              浅谈前端和移动端的事件机制
+                <%=result[i].title %>
               </a></li>
-            
+            <%}%>
          </ul>
       </div>
 
