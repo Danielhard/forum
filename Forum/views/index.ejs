@@ -1,220 +1,328 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title><%= title %></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/Plug-in/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel='stylesheet' href='/stylesheets/style.css'>
-    <link rel="stylesheet" href="/stylesheets/base.css">
-    <link rel="stylesheet" href="/stylesheets/index.css">
-    <link rel="stylesheet" href="/stylesheets/header.css">
 
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/Plug-in/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel='stylesheet' href='/stylesheets/style.css'>
+  <link rel="stylesheet" href="/stylesheets/base.css">
+  <link rel="stylesheet" href="/stylesheets/index.css">
+  <link rel="stylesheet" href="/stylesheets/header.css">
+  <link rel="stylesheet" href="/stylesheets/login.css">
 
 </head>
+
 <body>
 
-<div id="juejin">
+  <div id="juejin">
     <div id="view-container">
-        <!-- 导航栏   -->
-        <div id="header">
-            <div class="container">
-                <a href="/" class="logo"></a>
-                <div class="main-nav">
-                    <ul class="nav-list">
-                        <li class="main-nav-list">
-                            <div class="show-menu">
-                                <span>首页</span>
-                                <div class="icon ico-arrow-down-b"></div>
-                            </div>
-                            <!-- 首页按钮下拉菜单 -->
-
-                        </li>
-                        <li class="nav-item athor">
-                            <span>登录</span>
-                            <span>·注册</span>
-                        </li>
-                        <li class="nav-item loginon">
-                            <a href="#"></a>
-                            <div class="userimg"><img src="" alt=""></div>
-                        </li>
-                    </ul>
-                    <div class="show-down-box">
-                        <ul class="show-down">
-                            <li class="current"><a>首页</a></li>
-                            <li><a>专栏</a></li>
-                            <li><a>收藏集</a></li>
-                            <li><a>发现</a></li>
-                            <li><a>开源库</a></li>
-                        </ul>
-                    </div>
-                    <div class="show-personal-down">
-                        <ul>
-                            <li>
-                                <a>
-                                    <i><img src="../images/write.png"/></i>
-                                    <span>写文章</span>
-                                </a>
-                            </li>
-                            <li class="li-line">
-                                <a>
-                                    <i><img src="../images/draft.png"/></i>
-                                    <span>草稿</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <i><img src="../images/mypage.png"/></i>
-                                    <span>我的主页</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <i><img src="../images/problem.png"/></i>
-                                    <span>我的问题</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <i><img src="../images/collection.png"/></i>
-                                    <span>我的收藏</span>
-                                </a>
-                            </li>
-                            <li class="li-line">
-                                <a>
-                                    <i><img src="../images/label.png"/></i>
-                                    <span>标签管理</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <i><img src="../images/set.png"/></i>
-                                    <span>设置</span>
-                                </a>
-                            </li>
-                            <li class="li-line">
-                                <a>
-                                    <i><img src="../images/about.png"/></i>
-                                    <span>关于</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a>
-                                    <i><img src="../images/loginout.png"/></i>
-                                    <span>登出</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+      <!-- 导航栏   -->
+      <div id="header">
+        <div class="container">
+          <a href="/" class="logo"></a>
+          <div class="main-nav">
+            <ul class="nav-list">
+              <li class="main-nav-list">
+                <div class="show-menu">
+                  <span>首页</span>
+                  <div class="icon ico-arrow-down-b"></div>
                 </div>
+                <!-- 首页按钮下拉菜单 -->
+
+              </li>
+              <li class="nav-item athor">
+                <span>
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="Lobutton">登录</button>
+                </span>
+                <b>·</b>
+                <span>
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="rebutton">注册</button>
+                </span>
+              </li>
+              <li class="nav-item loginon">
+                <a href="#"></a>
+                <div class="userimg">
+                  <img src="" alt="">
+                </div>
+              </li>
+            </ul>
+            <div class="show-down-box">
+              <ul class="show-down">
+                <li class="current">
+                  <a>首页</a>
+                </li>
+                <li>
+                  <a>专栏</a>
+                </li>
+                <li>
+                  <a>收藏集</a>
+                </li>
+                <li>
+                  <a>发现</a>
+                </li>
+                <li>
+                  <a>开源库</a>
+                </li>
+              </ul>
             </div>
+            <div class="show-personal-down">
+              <ul>
+                <li>
+                  <a>
+                    <i>
+                      <img src="../images/write.png" />
+                    </i>
+                    <span>写文章</span>
+                  </a>
+                </li>
+                <li class="li-line">
+                  <a>
+                    <i>
+                      <img src="../images/draft.png" />
+                    </i>
+                    <span>草稿</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <i>
+                      <img src="../images/mypage.png" />
+                    </i>
+                    <span>我的主页</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <i>
+                      <img src="../images/problem.png" />
+                    </i>
+                    <span>我的问题</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <i>
+                      <img src="../images/collection.png" />
+                    </i>
+                    <span>我的收藏</span>
+                  </a>
+                </li>
+                <li class="li-line">
+                  <a>
+                    <i>
+                      <img src="../images/label.png" />
+                    </i>
+                    <span>标签管理</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <i>
+                      <img src="../images/set.png" />
+                    </i>
+                    <span>设置</span>
+                  </a>
+                </li>
+                <li class="li-line">
+                  <a>
+                    <i>
+                      <img src="../images/about.png" />
+                    </i>
+                    <span>关于</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <i>
+                      <img src="../images/loginout.png" />
+                    </i>
+                    <span>登出</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <!-- 登陆前中心 -->
-        <div class="banner-box">
-            <div id="banner">
-                <div class="banner-inner">
-                    <div class="inner-image"></div>
-                    <div class="banner-sogo">
-                        <h2>一个帮助开发者成长的社区</h2>
-                        <ul>
-                            <li>掘金 juejin.im 是一个为开发者服务的社区，我们相信通过分享和学习可以帮助那些渴望不断提高自己的开发者。</li>
-                            <li>Become a Better Developer by Learning and Sharing.</li>
-                        </ul>
-                    </div>
-                </div>
+      </div>
+      <!-- 登陆前中心 -->
+      <div class="banner-box">
+        <div id="banner">
+          <div class="banner-inner">
+            <div class="inner-image"></div>
+            <div class="banner-sogo">
+              <h2>一个帮助开发者成长的社区</h2>
+              <ul>
+                <li>掘金 juejin.im 是一个为开发者服务的社区，我们相信通过分享和学习可以帮助那些渴望不断提高自己的开发者。</li>
+                <li>Become a Better Developer by Learning and Sharing.</li>
+              </ul>
             </div>
-
-
-            <div class="hot">
-                <div class="hot-header">
-                    <h2>热门文章</h2>
-                </div>
-                <ul class="hot-list">
-                    <!-- <% for(var k = 0;k < data.length;k++){ %> -->
-                    <li><a href="#">
-                            <!-- <%= question[i] %> -->
-                            浅谈前端和移动端的事件机制
-                        </a></li>
-                    <!-- <% } %> -->
-                </ul>
-            </div>
-
-
-            <!-- end -->
+          </div>
         </div>
 
-        <!-- 登陆后中心     -->
-        <div class="comment-block">
-            <div class="comment-nav">
-                <a href="/">前端</a>
+
+        <div class="hot">
+          <div class="hot-header">
+            <h2>热门文章</h2>
+          </div>
+          <ul class="hot-list">
+            <!-- <% for(var k = 0;k < data.length;k++){ %> -->
+            <li>
+              <a href="#">
+                <!-- <%= question[i] %> -->
+                浅谈前端和移动端的事件机制
+              </a>
+            </li>
+            <!-- <% } %> -->
+          </ul>
+        </div>
+
+
+        <!-- end -->
+      </div>
+
+      <!-- 登陆后中心     -->
+      <div class="comment-block">
+        <div class="comment-nav">
+          <a href="/">前端</a>
+        </div>
+        <div class="online-entry-list">
+          <div class="online-header">
+            <div class="online-nav">
+              <ul class="linenav-list">
+                <li class="line-nav-item">
+                  <a href="#" class="current2">热门</a>
+                </li>
+                <li class="line-nav-item">
+                  <a href="#">最新</a>
+                </li>
+                <li class="line-nav-item ">
+                  <a href="#">评论</a>
+                </li>
+              </ul>
             </div>
-            <div class="online-entry-list">
-                <div class="online-header">
-                    <div class="online-nav">
-                        <ul class="linenav-list">
-                            <li class="line-nav-item"><a href="#" class="current2">热门</a></li>
-                            <li class="line-nav-item"><a href="#">最新</a></li>
-                            <li class="line-nav-item "><a href="#">评论</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <ul class="entry-list">
-                     <% for(var i = 0;i < data.length;i++) { %>
-                    <li class="entry-item">
-                        <div class="entry">
-                            <a href="/" class="entry-link">
-                                <div class="content-box">
-                                    <div class="info-box">
-                                        <div class="info-row meta-row">
-                                            <a href="/">
-                                                 <%= username[i] %>
-                                                伢语
-                                            </a>
-                                        </div>
-                                        <div class="info-row title-row">
-                                            <a href="/" class="title">
-                                                 <%= question[i] %>
-                                                JavaScript专题系列20篇正式完结！
-                                            </a>
-                                        </div>
-                                        <div class="info-row action-row">
-                                            <ul class="action-list">
-                                                <li class="item2 like">
-                                                    <a href="#" class="title-box">
-                                                        <img class="icon icon-like" src="../images/like.png" alt="">
-                                                        <span class="count">
-                                                       <%= up[i] %>
-                                                      259
-                                                    </span>
-                                                    </a>
-                                                </li>
-                                                <li class="item2 comment">
-                                                    <a href="#" class="title-box">
-                                                        <img class="icon" src="../images/comment.png" alt="">
-                                                        <span class="count">
-                                                         <%= commment[i] %>
-                                                          259
-                                                        </span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+          </div>
+          <ul class="entry-list">
+            <% for(var i = 0;i < data.length;i++) { %>
+              <li class="entry-item">
+                <div class="entry">
+                  <a href="/" class="entry-link">
+                    <div class="content-box">
+                      <div class="info-box">
+                        <div class="info-row meta-row">
+                          <a href="/">
+                            <%= username[i] %>
+                              伢语
+                          </a>
                         </div>
-                    </li>
-                     <% } %>
-                </ul>
-            </div>
+                        <div class="info-row title-row">
+                          <a href="/" class="title">
+                            <%= question[i] %>
+                              JavaScript专题系列20篇正式完结！
+                          </a>
+                        </div>
+                        <div class="info-row action-row">
+                          <ul class="action-list">
+                            <li class="item2 like">
+                              <a href="#" class="title-box">
+                                <img class="icon icon-like" src="../images/like.png" alt="">
+                                <span class="count">
+                                  <%= up[i] %>
+                                    259
+                                </span>
+                              </a>
+                            </li>
+                            <li class="item2 comment">
+                              <a href="#" class="title-box">
+                                <img class="icon" src="../images/comment.png" alt="">
+                                <span class="count">
+                                  <%= commment[i] %>
+                                    259
+                                </span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <% } %>
+          </ul>
         </div>
+      </div>
+    </div> -->
 
+    <!-- Button trigger modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <span id="err" class="err"></span>
+      <span class="suc" id="suc"></span>
+      <!-- 登录 -->
+      <div class="modal-dialog" role="document" id="login">
+        <img src="./images/1.png" alt="" class="login-img" id="login-img1">
+        <img src="./images/2.png" alt="" class="login-img" id="login-img2">
+        <img src="./images/3.png" alt="" class="login-img" id="login-img3">
+        <div class="modal-content">
+          <!-- <form action="/login" method="POST"> -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">登录</h4>
+          </div>
+          <div class="modal-body">
+            <input type="text" autocomplete="off" placeholder="请输入账号" class="account" id="account" name="username">
+            <input type="password" placeholder="请输入密码" class="password" id="login-password" name="password">
+          </div>
+          <div class="modal-footer">
+            <input type="submit" class="btn btn-default" id="LoBtn" value="登录">
+            <span class="login-bottom">
+              <p>没有账号？</p>
+              <a href="#" class="register" id="registerBtn">注册</a>
+              <a href="#" class="forgetpassword">忘记密码</a>
+            </span>
+          </div>
+          <!-- </form> -->
+        </div>
+      </div>
+      <!-- 注册 -->
+      <div class="modal-dialog" role="document" id="register">
+        <div class="modal-content">
+          <!-- <form action="/register" method="post" onsubmit="return checkout()"> -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">注册</h4>
+          </div>
+          <div class="modal-body">
+            <input type="text" autocomplete="off" placeholder="请输入账号" class="account" id="register-account" name="username">
+            <input type="password" autocomplete="off" placeholder="请输入密码" class="password" id="register-password" name="password">
+            <input type="password" autocomplete="off" placeholder="确认密码" id="confirm-password">
+          </div>
+          <div class="modal-footer">
+            <input type="submit" class="btn btn-default" id="ReBtn" value="注册" />
+            <span class="login-bottom">
+              <a href="#" id="loginBtn">已有登陆账号</a>
+            </span>
+          </div>
+          <!-- </form> -->
+        </div>
+      </div>
     </div>
-</div>
+
+
+  </div>
 
 </body>
 <script src="/Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
 <script src="/Plug-in/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="/javascripts/loginAndRegister.js"></script>
 <script src="/javascripts/index.js"></script>
+<script src="/javascripts/login.js"></script>
+
 </html>
