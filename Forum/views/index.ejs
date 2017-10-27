@@ -32,7 +32,7 @@
                   <div class="icon ico-arrow-down-b"></div>
                 </div>
                 <!-- 首页按钮下拉菜单 -->
-
+          <%if(!login){%>
               </li>
               <li class="nav-item athor">
                 <span>
@@ -43,12 +43,16 @@
                   <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="rebutton">注册</button>
                 </span>
               </li>
+          <%}else{%>
+
               <li class="nav-item loginon">
                 <a href="#"></a>
                 <div class="userimg">
-                  <img src="" alt="">
+                  <img src="<%=headpic %>" alt="">
                 </div>
               </li>
+          <%}%>    
+    
             </ul>
             <div class="show-down-box">
               <ul class="show-down">
@@ -136,7 +140,7 @@
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a href="/logout">
                     <i>
                       <img src="../images/loginout.png" />
                     </i>
@@ -149,6 +153,7 @@
         </div>
       </div>
       <!-- 登陆前中心 -->
+      <%if(!login){%>
       <div class="banner-box">
         <div id="banner">
           <div class="banner-inner">
@@ -176,12 +181,13 @@
             <%}%>
          </ul>
       </div>
-
+      
 
         <!-- end -->
       </div>
-
+    
       <!-- 登陆后中心     -->
+      <%}else{%>
       <div class="comment-block">
           <div class="comment-nav">
             <a href="#">前端</a>     
@@ -198,15 +204,15 @@
               </div> 
              <ul class="entry-list">
         <% for(var i=0;i<result.length;i++){%>
-               <li class="entry-item">
+               <li class="entry-item" data-id = "<%= result[i]['_id'] %>">
                   <div class="entry">
                       <a href="#" class="entry-link">
                         <div class="content-box">
                            <div class="info-box">
                                      <div class="info-row meta-row">
                                          <a href="#">
-                                        
-                                         <%=result[i].username %>
+                                       
+                                         <%=username %>
                                         </a>
                                      </div>
                                      <div class="info-row title-row">
@@ -246,7 +252,7 @@
                             </ul>
                      </div>
                  </div>        
-   
+       <%}%>
      </div>
   </div>
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

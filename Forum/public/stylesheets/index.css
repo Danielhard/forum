@@ -111,7 +111,7 @@
    height:auto;
    margin-top: .6rem;
    z-index:2;
-    display:none;
+    /* display:none; */
 }
 .comment-nav{
     width: 100%;

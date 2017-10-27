@@ -105,7 +105,7 @@
     position:absolute;
     right:0;
     display: flex;
-    display:none;
+    /* display:none; */
   }
   .loginon a{
       display:block;
@@ -201,4 +201,10 @@
 }
 .li-line {
 	border-bottom: 1px solid rgba(0,0,0,.04);
+}
+.logout{
+   display:felx;
+}
+.logout a{
+    text-decoration: none;
 }

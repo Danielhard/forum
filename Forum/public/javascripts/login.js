@@ -137,6 +137,7 @@ $("#LoBtn").on("touchstart",function(e){
     $.post("/login",data,function(data){
 
         if(data.status === 1){
+            window.location.reload();
             $("#suc").css({
                 "display":"block",
                 "opacity":1,
@@ -151,11 +152,7 @@ $("#LoBtn").on("touchstart",function(e){
             setTimeout(function(){
                 $(".modal-backdrop").css("display","none");
             },1000);
-            $(".comment-block").css("display","block");
-            $(".banner-box").css("display","none");
-            $(".nav-list").children().eq(1).css({"display":"none"});
-            $(".nav-list").children().eq(2).css({"display":"block"});
-        }else{
+           }else{
             $("#err").css({
                 "display":"block",
                 "opacity":1
