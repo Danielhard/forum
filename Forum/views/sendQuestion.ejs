@@ -6,11 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>quiz</title>
     <link rel="stylesheet" href="stylesheets/base.css">
-    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="stylesheets/header.css">
     <link rel="stylesheet" href="stylesheets/question.css">
-
+    <link rel="stylesheet" href="stylesheets/alert.css">
 </head>
 <body>
+<!--页面头部-->
 <div id="header">
     <div class="container">
         <a href="/" class="logo"></a>
@@ -104,11 +105,16 @@
         </div>
     </div>
 </div>
+<!--客户输入内容部分-->
 <div class="quiz-box">
+    <!--标题-->
     <div class="title-box">
-        <input placeholder="标题：一句话说清楚，用问号结尾" class="title"></div>
+        <input placeholder="标题：一句话说清楚，用问号结尾" class="title">
+    </div>
+    <!--标签-->
     <div class="tag-box">
         <div class="tag-text" id="tag-text">标签</div>
+        <!--标签选择栏-->
         <div class="tag-select-box" id="tag-select-box">
             <div class="select-box" id="select-box">
                 <ul>
@@ -121,7 +127,6 @@
                     <li class="label-head ">其他</li>
                 </ul>
             </div>
-
             <div class="development-language">
                 <ul>
                     <li class="down">javascript</li>
@@ -244,6 +249,7 @@
             </div>
         </div>
     </div>
+    <!--问题内容-->
     <div class="quiz-content">
     <textarea class="content" placeholder="
 1.描述你的问题
@@ -257,11 +263,14 @@
 5.已经尝试过哪些方法仍然没有解决（附上相关链接）"></textarea>
     </div>
 </div>
+<!--页面底部-->
 <div class="quiz-foot-box">
     <div class="quiz-foot">
         <a href="javascript:(0)" class="upload" id="upload">发布问题</a>
     </div>
 </div>
+<script src="javascripts/animate.js"></script>
+<script src="javascripts/alert.js"></script>
 <script src="Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
 <script src="javascripts/question.js"></script>
 </body>
