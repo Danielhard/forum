@@ -18,8 +18,9 @@ function insertData(collectionName,data,callback) {
  */
 function find(collectionName,data,callback) {
     this.model(collectionName).find(data,callback);
-}
+  }
 
+  
 /**
  * 
  * @param {* 集合名} collectionName 

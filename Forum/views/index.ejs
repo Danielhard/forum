@@ -177,12 +177,12 @@
               <h2>热门文章</h2>
          </div>
          <ul class="hot-list">
-           <!-- <% for(var k=0;k<data.length;k++){%> -->
+         
              <li><a href="#">
-              <!-- <%=question[i]%> -->
+        
               浅谈前端和移动端的事件机制
               </a></li>
-             <!-- <%}%> -->
+            
          </ul>
       </div>
 
@@ -206,7 +206,7 @@
                   </div>
               </div> 
              <ul class="entry-list">
-               <!-- <% for(var i=0;i<data.length;i++) { %> -->
+        <% for(var i=0;i<result.length;i++){%>
                <li class="entry-item">
                   <div class="entry">
                       <a href="/" class="entry-link">
@@ -214,14 +214,14 @@
                            <div class="info-box">
                                      <div class="info-row meta-row">
                                          <a href="/">
-                                          <!-- <%= username[i]%> -->
-                                          伢语
+                                        
+                                         <%=result[i].username %>
                                         </a>
                                      </div>
                                      <div class="info-row title-row">
                                          <a href="/"class="title">
-                                          <!-- <%= question[i]%> -->
-                                            JavaScript专题系列20篇正式完结！
+                                            <%=result[i].title %>
+                                           
                                         </a>
                                      </div>
                                      <div class="info-row action-row">
@@ -230,7 +230,7 @@
                                                 <a href="#" class="title-box">
                                                     <img class="icon icon-like" src="../images/like.png" alt="">
                                                     <span class="count">
-                                                      <!-- <%=up[i]%> -->
+                                                        <%=result[i].up %>
                                                       259
                                                     </span>
                                                 </a>
@@ -239,7 +239,7 @@
                                                     <a href="#" class="title-box">
                                                         <img class="icon" src="../images/comment.png" alt="">
                                                         <span class="count">
-                                                        <!-- <%=commment[i]%> -->
+                                                            <%=result[i].comment %>
                                                           259
                                                         </span>
                                                     </a>   
@@ -251,7 +251,7 @@
                                 </a>
                               </div>
                              </li>
-                             <!-- <%} %> -->
+                           <%}%> 
                             </ul>
                      </div>
                  </div>        
@@ -264,4 +264,5 @@
   <script src="/Plug-in/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
   <script src="/javascripts/loginAndRegister.js"></script>
   <script src="/javascripts/index.js"></script>
+  <script src="/Plug-in/bootstrap-3.3.7-dist/js/underscore-noflect.js></script>
 </html>
