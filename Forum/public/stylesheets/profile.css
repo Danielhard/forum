@@ -69,12 +69,14 @@ html {
 	width: 25%;
 	height: 100%;
 	float: left;
+	background: url(images/mypage.png) no-repeat center;
+	background-size: cover;
 	/*margin: .1rem;*/
 }
 .header-pic img{
-	width: 90%;
-	height: 90%;
-	margin: 5%;
+	width: 94%;
+	height: 94%;
+	margin: 3%;
 }
 .usertext {
 	width: 75%;
