@@ -59,17 +59,23 @@
       }
 
     });
+
   upload.addEventListener("touchstart",function () {
+    var collection=$("#tag-text span").text().split("x");
+    collection.splice($.inArray('',collection),1);
     var data ={
       username:"admin",
       title:$(".title").val(),
-      tag:$("#tag-text span").html(),
+      tag:collection,
       content:$(".content").val(),
       time: new Date().getTime()
     };
-    console.log(data["content"]);
-    $.post("/sendQuestion/subProblem",data,function (data) {
-      alert(data,1000);
-    })
+    if(data.title == ''||data.tag == ''||data.content == ''){
+      alert("您有未填写项目，发布失败",1000);
+      return;
+    }else {console.log(data["tag"]);
+      $.post("/sendQuestion/subProblem",data,function (data) {
+        alert(data,1000);
+      })}
   });
 })();

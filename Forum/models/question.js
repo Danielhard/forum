@@ -7,7 +7,7 @@ let questionSchema = new mongoose.Schema({
     userId        : {type : String},
     username      : {type : String},
     content       : {type : String},
-    title         : {type : String},
+    title         : {type : Array},
     tag           : {type : String},
     time          : {type : String},
     lookTimes     : {type : Number},
