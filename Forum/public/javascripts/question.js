@@ -38,7 +38,7 @@
             }
             var text = this.innerText;
             this.classList.add("up");
-            tagText.innerHTML+=`<span class="delete">${text} x</span>`;
+            tagText.innerHTML+=`<span class="delete" id="cover">${text} x</span>`;
           })
         })(k);
       }
@@ -48,7 +48,7 @@
     document.addEventListener("touchstart",function (e) {
       event=event||window.event;
       var target = event.target;
-      if(target.nodeName==='SPAN'){
+      if(target.id==='cover'){
         target.parentNode.removeChild(target);
       }else if(target.nodeName==='LI'){
         return;
