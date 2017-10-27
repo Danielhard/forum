@@ -58,6 +58,6 @@ router.get('/logout',function(req,res,next){
     console.log(req.session.userId) ;
     res.redirect('/');
 
-})
+}) 
 
 module.exports = router;
