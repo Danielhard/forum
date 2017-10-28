@@ -12,7 +12,7 @@
     $.get('/', {}, function (err, data) {
 
         var oLike = document.querySelectorAll('.like');
-        
+
         for (var i = 0; i < oLike.length; i++) {
             (function (i) {
 
@@ -28,19 +28,9 @@
                         trag = false;
                     }
                 });
-
-
             })(i)
-
         }
-
-
-
     })
-
-
-
-
     for (var k = 0; k < oSpan.length; k++) {
         (function (k) {
             oSpan[k].addEventListener("touchstart", function () {
@@ -80,9 +70,4 @@
             lock = true;
         }
     });
-
-
-
-
-
 })()

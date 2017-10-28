@@ -38,16 +38,7 @@ router.get('/', function (req, res, next) {
     if (err) {
       return;
     } else {
-      // req.session.questionid = result[0]._id;
-      // console.log(result);
-      // console.log(result[0]);
-      // res.render("index", {
-      //   title: "express",
-      //   result
-      // });
-    }
-
-
+     }
     res.render('index', {title : "666", result,username:req.session.username, login, headpic});
     return;
   });
