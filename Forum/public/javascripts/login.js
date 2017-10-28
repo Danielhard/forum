@@ -1,3 +1,5 @@
+
+(function(){
 //得到焦点图片变化
 var img1 = document.querySelector("#login-img1");
 var img2 = document.querySelector("#login-img2");
@@ -135,6 +137,7 @@ $("#LoBtn").on("touchstart",function(e){
     $.post("/login",data,function(data){
 
         if(data.status === 1){
+            window.location.reload();
             $("#suc").css({
                 "display":"block",
                 "opacity":1,
@@ -149,8 +152,7 @@ $("#LoBtn").on("touchstart",function(e){
             setTimeout(function(){
                 $(".modal-backdrop").css("display","none");
             },1000);
-            $("input").html("");
-        }else{
+           }else{
             $("#err").css({
                 "display":"block",
                 "opacity":1
@@ -174,5 +176,5 @@ function login() {
     $("#register").hide();
     $("#login").show();
 }
-
+})()
 

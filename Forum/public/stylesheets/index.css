@@ -75,7 +75,7 @@
     top:3.3rem;
 } 
 .hot-header{
-    width:95%;
+    width:100%;
     height:.5rem;
     background:#fff;
     padding-left:5%;
@@ -93,7 +93,7 @@
     background:#fff;
 }
 .hot-list li{
-    width:95%;
+    width:100%;
     height:.8rem;
     border-bottom:1px solid #ccc;
     font-size:.5rem;
@@ -111,7 +111,7 @@
    height:auto;
    margin-top: .6rem;
    z-index:2;
-    display:none;
+    /* display:none; */
 }
 .comment-nav{
     width: 100%;

@@ -37,7 +37,6 @@ html,body{
 .tag-text{
   line-height: 0.25rem;
   padding: 5px 0 5px 15px;
-  height: 0.4rem;
   width: 100%;
   border-radius:4px;
   border: 1px solid #999999;
@@ -92,6 +91,7 @@ html,body{
   background-color:#007fff;
 }
 .content{
+  font-size: 0.16rem;
   box-sizing: border-box;
   padding: 0.06rem 0.12rem;
   width: 100%;
@@ -124,6 +124,7 @@ html,body{
   height: 0.2rem;
   border-radius: 5px;
   float: right;
+  line-height: 0.2rem;
 }
 .delete{
   display: inline-block;

@@ -5,6 +5,7 @@
     position:fixed;
     border-bottom:1px solid #ccc;
     display:-webkit-box;
+    z-index: 10;
 }
 .container{
 	width:99%;
@@ -104,7 +105,7 @@
     position:absolute;
     right:0;
     display: flex;
-    display:none;
+    /* display:none; */
   }
   .loginon a{
       display:block;
@@ -113,6 +114,7 @@
       height:.24rem;
       background:url(../../images/ring.png) no-repeat;
       background-size:.18rem .24rem;
+      float: left;
     }
   .userimg{
       margin-left:.25rem;
@@ -120,6 +122,7 @@
       height:.3rem;
       border-radius:50%;
       background:#f1f1f1;
+      float: right;
   }
      .userimg img{
          width:100%;
@@ -198,4 +201,10 @@
 }
 .li-line {
 	border-bottom: 1px solid rgba(0,0,0,.04);
+}
+.logout{
+   display:felx;
+}
+.logout a{
+    text-decoration: none;
 }

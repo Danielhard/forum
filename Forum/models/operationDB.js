@@ -18,8 +18,9 @@ function insertData(collectionName,data,callback) {
  */
 function find(collectionName,data,callback) {
     this.model(collectionName).find(data,callback);
-}
+  }
 
+  
 /**
  * 
  * @param {* 集合名} collectionName 
@@ -29,7 +30,11 @@ function find(collectionName,data,callback) {
  * @param {* 回调函数} callback 
  */
 function update(collectionName,condition,data,option,callback) {
+<<<<<<< HEAD
     option = option || {multi: true};                     // 默认允许更新多个
+=======
+    // let option = option || {multi: true};                     // 默认允许更新多个
+>>>>>>> c1aa9784ddcff2aab4749b844efc0af7241ad969
     this.model(collectionName).update(condition,data,option,callback);
 }
 
