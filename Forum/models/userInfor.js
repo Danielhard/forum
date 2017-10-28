@@ -21,6 +21,7 @@ userInforSchema.statics.insertData = operationDbUserInfor.insertData;
 userInforSchema.statics.findUser = operationDbUserInfor.find;
 userInforSchema.statics.updateData = operationDbUserInfor.update;
 userInforSchema.statics.deleted = operationDbUserInfor.deleted;
+userInforSchema.statics.findByIdAndUpdateMet = operationDbUserInfor.findByIdAndUpdateMet;
 
 let userInfor = db.model('userInfor',userInforSchema);
 module.exports = userInfor;
