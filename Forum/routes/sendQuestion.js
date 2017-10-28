@@ -10,9 +10,9 @@ router.get('/', (req,res) => {
 
 let myquestion = [];
 router.post("/subProblem",(req,res) => {
-  let {username,title,content,time} = req.body;
+  let {title,content,time} = req.body;
   let tag = req.body['tag[]'];
-  let usernme = req.session.username;
+  let username = req.session.username;
   question.insertData('questions',{username,title,tag,content,time},function (err,result) {
     console.log(result);
     if(err){
