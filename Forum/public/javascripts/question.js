@@ -69,7 +69,6 @@
     var collection=$("#tag-text span").text().split("x");
     collection.splice($.inArray('',collection),1);
     var data ={
-      username:"admin",
       title:$(".title").val(),
       tag:collection,
       content:$(".content").val(),
