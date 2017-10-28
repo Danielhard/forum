@@ -8,30 +8,26 @@
         lock = true,
         trag = true;
     var oSpan = document.querySelector(".linenav-list").querySelectorAll('a');
-   
+
     var oLike = document.querySelectorAll('.like');
     var oShow = document.querySelectorAll('.count');
-    var oLi=document.querySelectorAll('.entry-item');
+    var oLi = document.querySelectorAll('.entry-item');
 
     for (var i = 0; i < oLike.length; i++) {
         (function (i) {
-            var count = 0;
+            var count = parseInt($('.count').html());
             oLike[i].addEventListener('touchstart', function (event) {
-                var questionId=oLi[i].dataset.id;
-
+                var questionId = oLi[i].dataset.id;
                 console.log(questionId);
-                if (event.target.className === "count") {
-                    count++;
-                  $.post('/up/'+ questionId, {
+                       count++;
+                    $.post('/up/' + questionId, {
                         count
-                    }, function (err, data) {
-                        if (err) {
-                            return;
-                        } else {
-                            console.log(data);
+                    }, function (data) {
+                        if (data.status == 1) {
+                            $('.count').html(count);
                         }
                     });
-                }
+                
             })
         })(i)
     }

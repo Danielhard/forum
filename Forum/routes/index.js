@@ -57,16 +57,11 @@ router.get('/logout', function (req, res, next) {
 
 router.post('/up/:questionId',(req,res) => {
   let questionId = req.params['questionId'];
-  console.log(questionId);
-
-  return;
   let userid = req.session.userId;
   console.log(userid);
   let { count } = req.body;
   console.log(count);
-  question.updateData("questions", {
-    userId : userid
-  },{'up': parseInt(count)},null,function(err,result){
+  question.findByIdAndUpdateMet("questions", {'_id':questionId},{'up': parseInt(count)},function(err,result){
       if(err){
         res.send({
           status : -1,
@@ -81,7 +76,6 @@ router.post('/up/:questionId',(req,res) => {
           } 
         );
       }
-
   })
 })
 
