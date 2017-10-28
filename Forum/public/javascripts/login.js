@@ -137,6 +137,7 @@ $("#LoBtn").on("touchstart",function(e){
     $.post("/login",data,function(data){
 
         if(data.status === 1){
+            window.location.reload();
             $("#myModal").css("display","none");
             $(".modal-backdrop").css("display","none");
             $(".comment-block").css("display","block");

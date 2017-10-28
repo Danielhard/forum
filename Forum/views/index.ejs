@@ -32,7 +32,7 @@
                   <div class="icon ico-arrow-down-b"></div>
                 </div>
                 <!-- 首页按钮下拉菜单 -->
-
+          <%if(!login){%>
               </li>
               <li class="nav-item athor">
                 <span>
@@ -43,12 +43,16 @@
                   <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="rebutton">注册</button>
                 </span>
               </li>
+          <%}else{%>
+
               <li class="nav-item loginon">
                 <a href="#"></a>
                 <div class="userimg">
-                  <img src="" alt="">
+                  <img src="<%=headpic %>" alt="">
                 </div>
               </li>
+          <%}%>    
+    
             </ul>
             <div class="show-down-box">
               <ul class="show-down">
@@ -76,7 +80,7 @@
                     <i>
                       <img src="../images/write.png" />
                     </i>
-                    <span>写文章</span>
+                    <span class="quiz">写文章</span>
                   </a>
                 </li>
                 <li class="li-line">
@@ -88,7 +92,7 @@
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a href="/personalCenter">
                     <i>
                       <img src="../images/mypage.png" />
                     </i>
@@ -136,11 +140,11 @@
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a href="/logout">
                     <i>
                       <img src="../images/loginout.png" />
                     </i>
-                    <span>登出</span>
+                    <span class="logout">登出</span>
                   </a>
                 </li>
               </ul>
@@ -149,6 +153,7 @@
         </div>
       </div>
       <!-- 登陆前中心 -->
+      <%if(!login){%>
       <div class="banner-box">
         <div id="banner">
           <div class="banner-inner">
@@ -169,23 +174,23 @@
               <h2>热门文章</h2>
          </div>
          <ul class="hot-list">
-         
+         <%for(var i=0;i<result.length;i++){%>
              <li><a href="#">
-        
-              浅谈前端和移动端的事件机制
+                <%=result[i].title %>
               </a></li>
-            
+            <%}%>
          </ul>
       </div>
-
+      
 
         <!-- end -->
       </div>
-
+    
       <!-- 登陆后中心     -->
+      <%}else{%>
       <div class="comment-block">
           <div class="comment-nav">
-            <a href="/">前端</a>     
+            <a href="#">前端</a>     
           </div>   
          <div class="online-entry-list"> 
               <div class="online-header">
@@ -199,19 +204,19 @@
               </div> 
              <ul class="entry-list">
         <% for(var i=0;i<result.length;i++){%>
-               <li class="entry-item">
+               <li class="entry-item" data-id = "<%= result[i]['_id'] %>">
                   <div class="entry">
-                      <a href="/" class="entry-link">
+                      <a href="#" class="entry-link">
                         <div class="content-box">
                            <div class="info-box">
                                      <div class="info-row meta-row">
-                                         <a href="/">
-                                        
-                                         <%=result[i].username %>
+                                         <a href="#">
+                                       
+                                         <%=username %>
                                         </a>
                                      </div>
                                      <div class="info-row title-row">
-                                         <a href="/"class="title">
+                                         <a href="#"class="title">
                                             <%=result[i].title %>
                                            
                                         </a>
@@ -247,7 +252,7 @@
                             </ul>
                      </div>
                  </div>        
-   
+       <%}%>
      </div>
   </div>
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -311,6 +316,7 @@
   <script src="/Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
   <script src="/Plug-in/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
   <script src="/javascripts/loginAndRegister.js"></script>
+  <script src="/javascripts/header.js"></script>
   <script src="/javascripts/index.js"></script>
   <script src="/javascripts/login.js"></script>
   <script src="/Plug-in/bootstrap-3.3.7-dist/js/underscore-noflect.js></script>

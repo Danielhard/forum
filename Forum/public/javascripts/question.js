@@ -69,18 +69,17 @@
     var collection=$("#tag-text span").text().split("x");
     collection.splice($.inArray('',collection),1);
     var data ={
-      username:"admin",
       title:$(".title").val(),
       tag:collection,
       content:$(".content").val(),
       time: new Date().getTime()
     };
     if(data.title == ''||data.tag == ''||data.content == ''){
-      alert("您有未填写项目，发布失败",1000);
+      alert("您有未填写项目，发布失败",800);
       return;
-    }else {console.log(data["tag"]);
+    }else {
       $.post("/sendQuestion/subProblem",data,function (data) {
-        alert(data,1000);
+        alert(data,800);
       })}
   });
 })();

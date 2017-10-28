@@ -12,6 +12,7 @@ let register = require('./routes/register');
 let personalCenter = require('./routes/personalCenter');
 let problemDetail = require('./routes/problemDetail');
 let sendQuestion = require('./routes/sendQuestion');
+let issue = require('./routes/issue');
 var app = express();
 
 var session = require('express-session');
@@ -35,6 +36,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public/images')));
 
 app.use('/', index);
 app.use('/users', users);
@@ -43,6 +45,8 @@ app.use('/register',register);
 app.use('/personalCenter',personalCenter);
 app.use('/problemDetail',problemDetail);
 app.use('/sendQuestion',sendQuestion);
+app.use('/issue',issue);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

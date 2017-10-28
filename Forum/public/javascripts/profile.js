@@ -1,10 +1,10 @@
 (function() {
-    
 	var Change = document.querySelectorAll('.change-input');
 	var doChange = document.querySelectorAll('.dochange');
 	var Changed = document.querySelectorAll('.changed');
-//	console.log(doChange);
-//	console.log(Changed);
+	var Oinput = document.querySelectorAll('input[name=contextdetail]');
+	console.log(Oinput);
+
 	for(var i = 0; i < doChange.length; i++) {
 		(function(i){
 			doChange[i].addEventListener('touchstart',function() {
@@ -13,5 +13,6 @@
 			  Changed[i].style.display = "block";
 			})
 		})(i)
-	}		
+	}
+	
 })()

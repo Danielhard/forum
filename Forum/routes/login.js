@@ -27,7 +27,7 @@ router.post('/',(req,res) => {
         if(commonJS.encryption(password) === result[0].password){
             req.session.username = result[0].username;
             req.session.userId =  result[0]._id;
-           console.log(req.session.userId) 
+           console.log(req.session.userId);
             res.send({
                 status:1,
                 msg:"登陆成功"
