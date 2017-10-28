@@ -29,7 +29,7 @@ router.post('/headPic',(req,res) => {
         // 第一个参数file.path表示上传的文件所在的路径
         // 5.5.2发送给浏览器端(客户端)
         let headPicUrl = './images / '+ username +'headPic.png';
-
+       
         usersInfor.updateData('userInfor', { username }, { headPic : headPicUrl },null,function(err,result) {
             console.log(result);
         })
@@ -38,10 +38,29 @@ router.post('/headPic',(req,res) => {
             url : headPicUrl
         });
 
-        
+     
     })
+   
     return;
 
 })
 
+
+router.post('/personalmessage',(req,res)=>{
+	
+	
+	   let{nickname,job,company,selfIntroduction,personalWebsite} =req.body;
+     let userid = req.session.userId;
+     console.log(userid);
+    usersInfor.updateData("userInfor",{ userid },{nickname,job,company,selfIntroduction,personalWebsitee},function(err,result){
+    	 console.log(result);
+    	 res.send('success');
+    	return ;
+    });
+    
+    
+	
+	
+	
+});
 module.exports = router;
