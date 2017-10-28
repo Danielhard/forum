@@ -52,7 +52,7 @@ router.post('/personalmessage',(req,res)=>{
 	   let{nickname,job,company,selfIntroduction,personalWebsite} =req.body;
      let userid = req.session.userId;
      console.log(userid);
-    usersInfor.updateData("userInfor",{ userid },{nickname,job,company,selfIntroduction,personalWebsite},function(err,result){
+    usersInfor.updateData("userInfor",{ userid },{nickname,job,company,selfIntroduction,personalWebsitee},function(err,result){
     	 console.log(result);
     	 res.send('success');
     	return ;
