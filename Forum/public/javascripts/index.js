@@ -42,33 +42,5 @@
             })
         })(k)
     }
-    oUserimg.addEventListener("touchstart", function () {
-        if (lock === false) {
-            oshowPersonal.style.display = "none";
-            lock = true;
-        } else {
-            oshowPersonal.style.display = "block";
-            lock = false;
-        }
-
-    }, true);
-    oshowMenu.addEventListener('touchstart', function () {
-        if (flag === false) {
-            oshowDown.style.display = "none";
-            flag = true;
-        } else {
-            oshowDown.style.display = "block";
-            flag = false;
-        }
-    }, true);
-    oCommentBlock.addEventListener('touchstart', function () {
-        if (lock === false) {
-            oshowPersonal.style.display = "none";
-            lock = true;
-        }
-        if (flag === false) {
-            oshowDown.style.display = "none";
-            lock = true;
-        }
-    });
+ 
 })()
