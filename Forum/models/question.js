@@ -23,6 +23,7 @@ questionSchema.statics.insertData = operationDB.insertData;
 questionSchema.statics.findUser = operationDB.find;
 questionSchema.statics.updateData = operationDB.update;
 questionSchema.statics.deleted = operationDB.deleted;
+questionSchema.statics.findByIdAndUpdateMet = operationDB.findByIdAndUpdateMet;
 
 
 let question = db.model('questions',questionSchema);
