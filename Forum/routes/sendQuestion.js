@@ -8,7 +8,7 @@ router.get('/', (req,res) => {
 });
 
 
-
+let myquestion = [];
 router.post("/subProblem",(req,res) => {
   let {username,title,content,time} = req.body;
   let tag = req.body['tag[]'];
@@ -38,4 +38,15 @@ router.post("/subProblem",(req,res) => {
   });
 });
 
+router.post("/subId",(req,res) =>{
+  let {myquestion} = req.body;
+  myQuestion.insertData('userInfor',{myquestion},function (err,result){
+    console.log(result);
+    if(err){
+      res.send("ID添加失败");
+    }else{
+      res.send("ID添加成功");
+    }
+  });
+});
 module.exports = router;
