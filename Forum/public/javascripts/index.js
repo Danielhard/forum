@@ -8,29 +8,34 @@
         lock = true,
         trag = true;
     var oSpan = document.querySelector(".linenav-list").querySelectorAll('a');
+   
+    var oLike = document.querySelectorAll('.like');
+    var oShow = document.querySelectorAll('.count');
+    var oLi=document.querySelectorAll('.entry-item');
 
-    $.get('/', {}, function (err, data) {
+    for (var i = 0; i < oLike.length; i++) {
+        (function (i) {
+            var count = 0;
+            oLike[i].addEventListener('touchstart', function (event) {
+                var questionId=oLi[i].dataset.id;
 
-        var oLike = document.querySelectorAll('.like');
+                console.log(questionId);
+                if (event.target.className === "count") {
+                    count++;
+                  $.post('/up/'+ questionId, {
+                        count
+                    }, function (err, data) {
+                        if (err) {
+                            return;
+                        } else {
+                            console.log(data);
+                        }
+                    });
+                }
+            })
+        })(i)
+    }
 
-        for (var i = 0; i < oLike.length; i++) {
-            (function (i) {
-
-                oLike[i].addEventListener('touchstart', function (event) {
-                    event.preventDefault();
-                    if (trag === false) {
-                        this.querySelector('img').src = "../images/like.png";
-                        this.querySelector('.count').style.color = "#ccc";
-                        trag = true;
-                    } else {
-                        this.querySelector('img').src = "../images/bluelike.png";
-                        this.querySelector('.count').style.color = "yellowgreen";
-                        trag = false;
-                    }
-                });
-            })(i)
-        }
-    })
     for (var k = 0; k < oSpan.length; k++) {
         (function (k) {
             oSpan[k].addEventListener("touchstart", function () {

@@ -32,7 +32,7 @@
                   <div class="icon ico-arrow-down-b"></div>
                 </div>
                 <!-- 首页按钮下拉菜单 -->
-          <%if(!login){%>
+                <%if(!login){%>
               </li>
               <li class="nav-item athor">
                 <span>
@@ -43,16 +43,16 @@
                   <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="rebutton">注册</button>
                 </span>
               </li>
-          <%}else{%>
+              <%}else{%>
 
-              <li class="nav-item loginon">
-                <a href="#"></a>
-                <div class="userimg">
-                  <img src="<%=headpic %>" alt="">
-                </div>
-              </li>
-          <%}%>    
-    
+                <li class="nav-item loginon">
+                  <a href="#"></a>
+                  <div class="userimg">
+                    <img src="<%=headpic %>" alt="">
+                  </div>
+                </li>
+                <%}%>
+
             </ul>
             <div class="show-down-box">
               <ul class="show-down">
@@ -154,106 +154,114 @@
       </div>
       <!-- 登陆前中心 -->
       <%if(!login){%>
-      <div class="banner-box">
-        <div id="banner">
-          <div class="banner-inner">
-            <div class="inner-image"></div>
-            <div class="banner-sogo">
-              <h2>一个帮助开发者成长的社区</h2>
-              <ul>
-                <li>掘金 juejin.im 是一个为开发者服务的社区，我们相信通过分享和学习可以帮助那些渴望不断提高自己的开发者。</li>
-                <li>Become a Better Developer by Learning and Sharing.</li>
+        <div class="banner-box">
+          <div id="banner">
+            <div class="banner-inner">
+              <div class="inner-image"></div>
+              <div class="banner-sogo">
+                <h2>一个帮助开发者成长的社区</h2>
+                <ul>
+                  <li>掘金 juejin.im 是一个为开发者服务的社区，我们相信通过分享和学习可以帮助那些渴望不断提高自己的开发者。</li>
+                  <li>Become a Better Developer by Learning and Sharing.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="hot">
+            <div class="hot-header">
+              <h2>热门文章</h2>
+            </div>
+            <ul class="hot-list">
+              <%for(var i=0;i<result.length;i++){%>
+                <li>
+                  <a href="#">
+                    <%=result[i].title %>
+                  </a>
+                </li>
+                <%}%>
+            </ul>
+          </div>
+
+
+          <!-- end -->
+        </div>
+
+        <!-- 登陆后中心     -->
+        <%}else{%>
+          <div class="comment-block">
+            <div class="comment-nav">
+              <a href="#">前端</a>
+            </div>
+            <div class="online-entry-list">
+              <div class="online-header">
+                <div class="online-nav">
+                  <ul class="linenav-list">
+                    <li class="line-nav-item">
+                      <a href="#" class="current2">热门</a>
+                    </li>
+                    <li class="line-nav-item">
+                      <a href="#">最新</a>
+                    </li>
+                    <li class="line-nav-item ">
+                      <a href="#">评论</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="entry-list">
+                <% for(var i=0;i<result.length;i++){%>
+                  <li class="entry-item" data-id="<%= result[i]['_id'] %>">
+                    <div class="entry">
+                      <a href="#" class="entry-link">
+                        <div class="content-box">
+                          <div class="info-box">
+                            <div class="info-row meta-row">
+                              <a href="#">
+
+                                <%=username %>
+                              </a>
+                            </div>
+                            <div class="info-row title-row">
+                              <a href="#" class="title">
+                                <%=result[i].title %>
+
+                              </a>
+                            </div>
+                            <div class="info-row action-row">
+                              <ul class="action-list">
+                                <li class="item2 like">
+                                  <a href="javascript:(0)" class="title-box">
+                                    <img class="icon icon-like" src="../images/like.png" alt="">
+                                    <span class="count">
+                                      <%=result[i].up %>
+                                       
+                                    </span>
+                                  </a>
+                                </li>
+                                <li class="item2 comment">
+                                  <a href="#" class="title-box">
+                                    <img class="icon" src="../images/comment.png" alt="">
+                                    <span class="count">
+                                      <%=result[i].comment %>
+                                        259
+                                    </span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <%}%>
               </ul>
             </div>
           </div>
-        </div>
-
-
-        <div class="hot">
-          <div class="hot-header">
-              <h2>热门文章</h2>
-         </div>
-         <ul class="hot-list">
-         <%for(var i=0;i<result.length;i++){%>
-             <li><a href="#">
-                <%=result[i].title %>
-              </a></li>
-            <%}%>
-         </ul>
-      </div>
-      
-
-        <!-- end -->
-      </div>
-    
-      <!-- 登陆后中心     -->
-      <%}else{%>
-      <div class="comment-block">
-          <div class="comment-nav">
-            <a href="#">前端</a>     
-          </div>   
-         <div class="online-entry-list"> 
-              <div class="online-header">
-                  <div class="online-nav">
-                      <ul class="linenav-list">
-                          <li class="line-nav-item"><a href="#" class="current2">热门</a></li>
-                          <li class="line-nav-item"><a href="#">最新</a></li>
-                          <li class="line-nav-item "><a href="#">评论</a></li>
-                      </ul>
-                  </div>
-              </div> 
-             <ul class="entry-list">
-        <% for(var i=0;i<result.length;i++){%>
-               <li class="entry-item" data-id = "<%= result[i]['_id'] %>">
-                  <div class="entry">
-                      <a href="#" class="entry-link">
-                        <div class="content-box">
-                           <div class="info-box">
-                                     <div class="info-row meta-row">
-                                         <a href="#">
-                                       
-                                         <%=username %>
-                                        </a>
-                                     </div>
-                                     <div class="info-row title-row">
-                                         <a href="#"class="title">
-                                            <%=result[i].title %>
-                                           
-                                        </a>
-                                     </div>
-                                     <div class="info-row action-row">
-                                         <ul class="action-list">
-                                            <li class="item2 like">
-                                                <a href="#" class="title-box">
-                                                    <img class="icon icon-like" src="../images/like.png" alt="">
-                                                    <span class="count">
-                                                        <%=result[i].up %>
-                                                      259
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li class="item2 comment">
-                                                    <a href="#" class="title-box">
-                                                        <img class="icon" src="../images/comment.png" alt="">
-                                                        <span class="count">
-                                                            <%=result[i].comment %>
-                                                          259
-                                                        </span>
-                                                    </a>   
-                                             </li>
-                                            </ul>
-                                     </div>
-                                  </div>
-                                 </div>
-                                </a>
-                              </div>
-                             </li>
-                           <%}%> 
-                            </ul>
-                     </div>
-                 </div>        
-       <%}%>
-     </div>
+          <%}%>
+    </div>
   </div>
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <span id="err" class="err"></span>
@@ -265,24 +273,24 @@
       <img src="./images/3.png" alt="" class="login-img" id="login-img3">
       <div class="modal-content">
         <!-- <form action="/login" method="POST"> -->
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h4 class="modal-title" id="myModalLabel">登录</h4>
-          </div>
-          <div class="modal-body">
-            <input type="text" autocomplete="off" placeholder="请输入账号" class="account" id="account" name="username">
-            <input type="password" placeholder="请输入密码" class="password" id="login-password" name="password">
-          </div>
-          <div class="modal-footer">
-            <input type="submit" class="btn btn-default" id="LoBtn" value="登录">
-            <span class="login-bottom">
-              <p>没有账号？</p>
-              <a href="#" class="register" id="registerBtn">注册</a>
-              <a href="#" class="forgetpassword">忘记密码</a>
-            </span>
-          </div>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">登录</h4>
+        </div>
+        <div class="modal-body">
+          <input type="text" autocomplete="off" placeholder="请输入账号" class="account" id="account" name="username">
+          <input type="password" placeholder="请输入密码" class="password" id="login-password" name="password">
+        </div>
+        <div class="modal-footer">
+          <input type="submit" class="btn btn-default" id="LoBtn" value="登录">
+          <span class="login-bottom">
+            <p>没有账号？</p>
+            <a href="#" class="register" id="registerBtn">注册</a>
+            <a href="#" class="forgetpassword">忘记密码</a>
+          </span>
+        </div>
         <!-- </form> -->
       </div>
     </div>
@@ -290,34 +298,34 @@
     <div class="modal-dialog" role="document" id="register">
       <div class="modal-content">
         <!-- <form action="/register" method="post" onsubmit="return checkout()"> -->
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h4 class="modal-title" id="myModalLabel">注册</h4>
-          </div>
-          <div class="modal-body">
-            <input type="text" autocomplete="off" placeholder="请输入账号" class="account" id="register-account" name="username">
-            <input type="password" autocomplete="off" placeholder="请输入密码" class="password" id="register-password" name="password">
-            <input type="password" autocomplete="off" placeholder="确认密码" id="confirm-password">
-          </div>
-          <div class="modal-footer">
-            <input type="submit" class="btn btn-default" id="ReBtn" value="注册"/>
-            <span class="login-bottom">
-              <a href="#" id="loginBtn">已有登陆账号</a>
-            </span>
-          </div>
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">注册</h4>
+        </div>
+        <div class="modal-body">
+          <input type="text" autocomplete="off" placeholder="请输入账号" class="account" id="register-account" name="username">
+          <input type="password" autocomplete="off" placeholder="请输入密码" class="password" id="register-password" name="password">
+          <input type="password" autocomplete="off" placeholder="确认密码" id="confirm-password">
+        </div>
+        <div class="modal-footer">
+          <input type="submit" class="btn btn-default" id="ReBtn" value="注册" />
+          <span class="login-bottom">
+            <a href="#" id="loginBtn">已有登陆账号</a>
+          </span>
+        </div>
         <!-- </form> -->
       </div>
     </div>
   </div>
 
-  </body>
-  <script src="/Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
-  <script src="/Plug-in/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-  <script src="/javascripts/loginAndRegister.js"></script>
-  <script src="/javascripts/header.js"></script>
-  <script src="/javascripts/index.js"></script>
-  <script src="/javascripts/login.js"></script>
-  <script src="/Plug-in/bootstrap-3.3.7-dist/js/underscore-noflect.js></script>
+</body>
+<script src="/Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+<script src="/Plug-in/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="/javascripts/loginAndRegister.js"></script>
+<script src="/javascripts/header.js"></script>
+<script src="/javascripts/index.js"></script>
+<script src="/javascripts/login.js"></script>
+<script src="/Plug-in/bootstrap-3.3.7-dist/js/underscore-noflect.js></script>
 </html>

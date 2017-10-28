@@ -13,7 +13,21 @@ router.post("/subProblem",(req,res) => {
   let {username,title,content,time} = req.body;
   let tag = req.body['tag[]'];
   let usernme = req.session.username;
-  question.insertData('questions',{username,title,tag,content,time},function (err,result) {
+  let data = {
+    userId: req.session.userId,
+    username,
+    content,
+    title,
+    tag,      
+    time,
+    lookTimes: 0,
+    isSolved: 'false',
+    up:0,
+    down:0,
+    collect:0,
+    Reply: []  
+  }
+  question.insertData('questions',data,function (err,result) {
     console.log(result);
     if(err){
       res.send("问题未能成功发布");
@@ -24,14 +38,13 @@ router.post("/subProblem",(req,res) => {
     }else {
       var userId =  req.session.userId;
       var questionId = result._id;
-
+      
       console.log(userId);
       userInfor.updateData('userInfor',{userid : userId},{$push : {'myquestion' : questionId}},null,function (err,result) {
         if(err){
           res.send("插入数据失败");
           return;
         }
-        console.log(result);
         res.send("问题发布成功");
       });
       }
