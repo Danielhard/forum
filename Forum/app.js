@@ -12,10 +12,7 @@ let register = require('./routes/register');
 let personalCenter = require('./routes/personalCenter');
 let problemDetail = require('./routes/problemDetail');
 let sendQuestion = require('./routes/sendQuestion');
-<<<<<<< HEAD
 let issue = require('./routes/issue');
-=======
->>>>>>> c1aa9784ddcff2aab4749b844efc0af7241ad969
 var app = express();
 
 var session = require('express-session');
