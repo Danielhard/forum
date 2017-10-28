@@ -21,7 +21,7 @@ let questionSchema = new mongoose.Schema({
 // 静态方法
 questionSchema.statics.insertData = operationDB.insertData;
 questionSchema.statics.findUser = operationDB.find;
-questionSchema.statics.upadteData = operationDB.update;
+questionSchema.statics.updateData = operationDB.update;
 questionSchema.statics.deleted = operationDB.deleted;
 questionSchema.statics.findByIdAndUpdateMet = operationDB.findByIdAndUpdateMet;
 questionSchema.statics.findById = operationDB.findById;

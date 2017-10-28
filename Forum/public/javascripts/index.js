@@ -9,28 +9,29 @@
         trag = true;
     var oSpan = document.querySelector(".linenav-list").querySelectorAll('a');
 
-    $.get('/', {}, function (err, data) {
+    var oLike = document.querySelectorAll('.like');
+    var oShow = document.querySelectorAll('.count');
+    var oLi = document.querySelectorAll('.entry-item');
 
-        var oLike = document.querySelectorAll('.like');
+    for (var i = 0; i < oLike.length; i++) {
+        (function (i) {
+            var count = parseInt($('.count').html());
+            oLike[i].addEventListener('touchstart', function (event) {
+                var questionId = oLi[i].dataset.id;
+                console.log(questionId);
+                       count++;
+                    $.post('/up/' + questionId, {
+                        count
+                    }, function (data) {
+                        if (data.status == 1) {
+                            $('.count').html(count);
+                        }
+                    });
+                
+            })
+        })(i)
+    }
 
-        for (var i = 0; i < oLike.length; i++) {
-            (function (i) {
-
-                oLike[i].addEventListener('touchstart', function (event) {
-                    event.preventDefault();
-                    if (trag === false) {
-                        this.querySelector('img').src = "../images/like.png";
-                        this.querySelector('.count').style.color = "#ccc";
-                        trag = true;
-                    } else {
-                        this.querySelector('img').src = "../images/bluelike.png";
-                        this.querySelector('.count').style.color = "yellowgreen";
-                        trag = false;
-                    }
-                });
-            })(i)
-        }
-    })
     for (var k = 0; k < oSpan.length; k++) {
         (function (k) {
             oSpan[k].addEventListener("touchstart", function () {
@@ -79,4 +80,5 @@
             window.location.href = '/problemDetail/' + this.dataset.id; 
         });
     }
+ 
 })()

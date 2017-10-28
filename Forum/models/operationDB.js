@@ -48,11 +48,11 @@ function deleted(collectionName,data,callback) {
  * 
  * @param {* 集合名} collectionName 
  * @param {* mongodb中自动生成的_id} id 
- * @param {* 要修改的数据} update 
+ * @param {* 要修改的数据} updateData
  * @param {* 回调函数} callback 
  */
-function findByIdAndUpdateMet(collectionName,id,update,callback){
-    this.model(collectionName).findByIdAndUpdate(id,upadte,callback);
+function findByIdAndUpdateMet(collectionName,id,updateData,callback){
+    this.model(collectionName).findByIdAndUpdate(id,updateData,callback);
 }
 
 /**

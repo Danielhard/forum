@@ -19,107 +19,135 @@
 			<!-- 导航栏   -->
 			<div id="header">
 				<div class="container">
-					<a href="/" class="logo"></a>
-					<div class="main-nav">
-						<ul class="nav-list">
-							<li class="main-nav-list">
-								<div class="show-menu">
-									<span>首页</span>
-									<div class="icon ico-arrow-down-b"></div>
-								</div>
-								<!-- 首页按钮下拉菜单 -->
-
-							</li>
-							<li class="nav-item athor">
-								<span>登录</span>
-								<span>·注册</span>
-							</li>
-							<li class="nav-item loginon">
-								<a href="#"></a>
-								<div class="userimg"><img src="" alt=""></div>
-							</li>
-						</ul>
-						<div class="show-down-box">
-							<ul class="show-down">
-								<li class="current">
-									<a>首页</a>
-								</li>
-								<li>
-									<a>专栏</a>
-								</li>
-								<li>
-									<a>收藏集</a>
-								</li>
-								<li>
-									<a>发现</a>
-								</li>
-								<li>
-									<a>开源库</a>
-								</li>
-							</ul>
+				  <a href="/" class="logo"></a>
+				  <div class="main-nav">
+					<ul class="nav-list">
+					  <li class="main-nav-list">
+						<div class="show-menu">
+						  <span>首页</span>
+						  <div class="icon ico-arrow-down-b"></div>
 						</div>
-						<div class="show-personal-down">
-							<ul>
-								<li>
-									<a>
-										<i><img src="../images/write.png"/></i>
-										<span>写文章</span>
-									</a>
-								</li>
-								<li class="li-line">
-									<a>
-										<i><img src="../images/draft.png"/></i>
-										<span>草稿</span>
-									</a>
-								</li>
-								<li>
-									<a>
-										<i><img src="../images/mypage.png"/></i>
-										<span>我的主页</span>
-									</a>
-								</li>
-								<li>
-									<a>
-										<i><img src="../images/problem.png"/></i>
-										<span>我的问题</span>
-									</a>
-								</li>
-								<li>
-									<a>
-										<i><img src="../images/collection.png"/></i>
-										<span>我的收藏</span>
-									</a>
-								</li>
-								<li class="li-line">
-									<a>
-										<i><img src="../images/label.png"/></i>
-										<span>标签管理</span>
-									</a>
-								</li>
-								<li>
-									<a>
-										<i><img src="../images/set.png"/></i>
-										<span>设置</span>
-									</a>
-								</li>
-								<li class="li-line">
-									<a>
-										<i><img src="../images/about.png"/></i>
-										<span>关于</span>
-									</a>
-								</li>
-								<li>
-									<a>
-										<i><img src="../images/loginout.png"/></i>
-										<span>登出</span>
-									</a>
-								</li>
-							</ul>
-							<!--</div>-->
-						</div>
+						<!-- 首页按钮下拉菜单 -->
+						<%if(!login){%>
+					  </li>
+					  <li class="nav-item athor">
+						<span>
+						  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="Lobutton">登录</button>
+						</span>
+						<b>·</b>
+						<span>
+						  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="rebutton">注册</button>
+						</span>
+					  </li>
+					  <%}else{%>
+		
+						<li class="nav-item loginon">
+						  <a href="#"></a>
+						  <div class="userimg">
+							<img src="<%=headpic %>" alt="">
+						  </div>
+						</li>
+						<%}%>
+		
+					</ul>
+					<div class="show-down-box">
+					  <ul class="show-down">
+						<li class="current">
+						  <a href='/'>首页</a>
+						</li>
+						<li>
+						  <a>专栏</a>
+						</li>
+						<li>
+						  <a>收藏集</a>
+						</li>
+						<li>
+						  <a>发现</a>
+						</li>
+						<li>
+						  <a>开源库</a>
+						</li>
+					  </ul>
 					</div>
+					<div class="show-personal-down">
+					  <ul>
+						<li>
+						  <a>
+							<i>
+							  <img src="../images/write.png" />
+							</i>
+							<span class="quiz">写文章</span>
+						  </a>
+						</li>
+						<li class="li-line">
+						  <a>
+							<i>
+							  <img src="../images/draft.png" />
+							</i>
+							<span>草稿</span>
+						  </a>
+						</li>
+						<li>
+						  <a href="/personalCenter">
+							<i>
+							  <img src="../images/mypage.png" />
+							</i>
+							<span>我的主页</span>
+						  </a>
+						</li>
+						<li>
+						  <a href="/users/issue">
+							<i>
+							  <img src="../images/problem.png" />
+							</i>
+							<span>我的问题</span>
+						  </a>
+						</li>
+						<li>
+						  <a>
+							<i>
+							  <img src="../images/collection.png" />
+							</i>
+							<span>我的收藏</span>
+						  </a>
+						</li>
+						<li class="li-line">
+						  <a>
+							<i>
+							  <img src="../images/label.png" />
+							</i>
+							<span>标签管理</span>
+						  </a>
+						</li>
+						<li>
+						  <a>
+							<i>
+							  <img src="../images/set.png" />
+							</i>
+							<span>设置</span>
+						  </a>
+						</li>
+						<li class="li-line">
+						  <a>
+							<i>
+							  <img src="../images/about.png" />
+							</i>
+							<span>关于</span>
+						  </a>
+						</li>
+						<li>
+						  <a href="/logout">
+							<i>
+							  <img src="../images/loginout.png" />
+							</i>
+							<span class="logout">登出</span>
+						  </a>
+						</li>
+					  </ul>
+					</div>
+				  </div>
 				</div>
-			</div>
+			  </div>
 			<!--个人资料-->
 			<div class="file-nav">
 				<span class="no1">个人资料</span>
@@ -199,6 +227,8 @@
 	<script type="text/javascript" src="/javascripts/profile.js"></script>
 	<script type="text/javascript" src="/javascripts/onloadpic.js"></script>
 	<script type="text/javascript" src="/javascripts/profiletoast.js"></script>
+	<script src="/javascripts/header.js"></script>
+
 </body>
 
 </html>
