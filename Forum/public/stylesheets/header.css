@@ -187,6 +187,7 @@
 .show-personal-down ul li a {
 	display: block;
 	padding: .06rem .1rem;
+	color: #007FFF;
 }
 .show-personal-down ul li a i {
 	float: left;

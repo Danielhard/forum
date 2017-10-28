@@ -46,7 +46,8 @@ html {
 }
 .file-content>ul>li {
 	width: 100%;
-	border-top: 1px solid #f1f1f1;
+	list-style: none;
+	/*border-top: 1px solid #f1f1f1;*/
 }
 .formtitle {
 	font-size: .15rem;
@@ -93,7 +94,7 @@ html {
 	color: #FFFFFF;
 	background-color: #007FFF;
 	margin: .05rem 0 0;
-	padding: .02rem .1rem;
+	/*padding: .02rem .1rem;*/
 	border: none;
 	outline: none;
 	border-radius: 3px;
@@ -119,8 +120,11 @@ html {
 	display: block;
 	width: 1.5rem;
 	height: .4rem;
+	line-height: .4rem;
 	color: #FFFFFF;
+	font-size: .2rem;
 	font-weight: 600;
+	text-align: center;
 	background-color: #007FFF;
 	outline: none;
 	border: none;
