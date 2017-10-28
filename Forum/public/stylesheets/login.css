@@ -104,20 +104,20 @@ body,html{
    display: none;
 }
 .suc{
-    height: 1rem;
-    width: 3rem;
+    height: .5rem;
+    width: 1.5rem;
     background:#cccccc;
     position:absolute;
     top:50%;
     left:50%;
-    margin-left:-1.5rem;
+    margin-left:-.7rem;
     margin-top:-1.5rem;  
     z-index: 99;
     color: #007fff;
     display: none;
     font-size: .2rem;
     text-align: center;
-    line-height: 1rem;
+    line-height: .5rem;
     border-radius:.1rem; 
 }
 

@@ -137,20 +137,8 @@ $("#LoBtn").on("touchstart",function(e){
     $.post("/login",data,function(data){
 
         if(data.status === 1){
-            $("#suc").css({
-                "display":"block",
-                "opacity":1,
-            })
-            $("#suc").html(data.msg).stop(true).animate({
-                "opacity":0,
-                "z-index":0  
-            },1000);
-            setTimeout(function(){
-                $("#myModal").css("display","none");
-            },1000);
-            setTimeout(function(){
-                $(".modal-backdrop").css("display","none");
-            },1000);
+            $("#myModal").css("display","none");
+            $(".modal-backdrop").css("display","none");
             $(".comment-block").css("display","block");
             $(".banner-box").css("display","none");
             $(".nav-list").children().eq(1).css({"display":"none"});
