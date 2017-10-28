@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  color: #323232;
+  text-decoration: none;
+}
+html{
+	font-size: 100px;
+}
+body{
+  background: #f3f4f4;
+}
+header{
+	height: 0.6rem;
+	background-color: #fff;
+  color: #323232;
+}
+
+
+article{
+	width: 100%;
+	height: 2.6rem;
+	text-align: center;
+  background: #f3f4f4;
+  color: #323232;
+}
+article img{
+	width: 85px;
+	height: 85px;
+	border-radius: 50%;
+	margin-top: 65px;
+}
+article p{
+	font-size: 22px;
+	margin: 10px 0 15px 0;
+}
+article p span{
+  width: 100px;
+  height: 36px;
+  margin: auto;
+  line-height: 36px;
+  display: block;
+	font-size: 18px;
+	border:1px solid #323232;
+}
+article p span:hover{
+  background: #ebecec;
+}
+section {
+  color: #323232;
+  background: #fff;
+  border-bottom:1px solid #CCCED0;
+}
+.quiz{
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  padding-left: 20px;
+  border-bottom:1px solid #CCCED0;
+}
+section ul li{
+  border-bottom:1px solid #CCCED0;
+}
+section ul li:last-child{
+  border-bottom:0;
+}
+section ul li div{
+  padding: 15px 20px 15px 20px;
+}
+section ul li div p {
+  margin-top: 5px;
+  font-size: 12px;
+}
+section ul li div p a:hover{
+  text-decoration: underline;
+}
+section ul li div p span{
+  margin-left: 10px;
+}
+footer{
+  height: 50px;
+  background: #f3f4f4;
+}
