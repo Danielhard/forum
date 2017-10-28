@@ -61,10 +61,10 @@ router.post('/',(req,res) => {
                 nickname         : '',
                 job              : '',
                 company          : '',
-                selfIntroduction : '',
-                personalWebsite  : '',
-                myquestion       : [],
-                bestLike         : []
+               selfIntroduction  : '',
+               personalWebsite   : '',
+               myquestion        : [],
+               bestLike          : []
             }
             userInfor.insertData('userInfor',data,function(err,result) {
                 console.log(result);
