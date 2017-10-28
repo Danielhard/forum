@@ -17,6 +17,7 @@ userSchema.statics.findUser = operationDBUsers.find;
 userSchema.statics.updateData = operationDBUsers.update;
 userSchema.statics.deleted = operationDBUsers.deleted;
 userSchema.statics.findByIdAndUpdateMet = operationDBUsers.findByIdAndUpdateMet;
+userSchema.statics.findById = operationDBUsers.findById;
 
 let users = db.model('users',userSchema);
 module.exports = users;

@@ -55,10 +55,20 @@ function findByIdAndUpdateMet(collectionName,id,update,callback){
     this.model(collectionName).findByIdAndUpdate(id,upadte,callback);
 }
 
+/**
+ * 
+ * @param {* 集合名} collection 
+ * @param {* mongodb中自动生成的_id} id 
+ * @param {* 回调函数} callback 
+ */
+function findById(collection,id,callback){
+    this.model(collectionName).findById(id,callback);
+}
+
 // 这里写了四个基本的方法,并没有一一测试过,如果有错及时和我说,要是要添加其他方法,也可以和我说
 
 
 /**
  * 向外部暴露方法
  */
-module.exports = { insertData, find, update, deleted, findByIdAndUpdateMet};
+module.exports = { insertData, find, update, deleted, findByIdAndUpdateMet,findById};

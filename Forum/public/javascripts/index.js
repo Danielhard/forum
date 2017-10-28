@@ -70,4 +70,13 @@
             lock = true;
         }
     });
+
+
+    // 叶家辉,跳转到问题详情页面
+    let entryItemCollection = document.querySelectorAll('.entry-item');
+    for (var i = 0; i < entryItemCollection.length; i++) {
+        entryItemCollection[i].addEventListener('click',function(e){
+            window.location.href = '/problemDetail/' + this.dataset.id; 
+        });
+    }
 })()
