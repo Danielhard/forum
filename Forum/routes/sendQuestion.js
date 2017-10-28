@@ -12,6 +12,7 @@ router.get('/', (req,res) => {
 router.post("/subProblem",(req,res) => {
   let {username,title,content,time} = req.body;
   let tag = req.body['tag[]'];
+  let usernme = req.session.username;
   question.insertData('questions',{username,title,tag,content,time},function (err,result) {
     console.log(result);
     if(err){
@@ -23,7 +24,9 @@ router.post("/subProblem",(req,res) => {
     }else {
       var userId =  req.session.userId;
       var questionId = result._id;
-      userInfor.updateData('userInfor',{userId},{$push : {'myquestion' : questionId}},null,function (err,result) {
+
+      console.log(userId);
+      userInfor.updateData('userInfor',{userid : userId},{$push : {'myquestion' : questionId}},null,function (err,result) {
         if(err){
           res.send("插入数据失败");
           return;
