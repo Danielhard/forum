@@ -23,21 +23,32 @@
                   <div class="icon ico-arrow-down-b"></div>
                 </div>
                 <!-- 首页按钮下拉菜单 -->
-
+                <%if(!login){%>
               </li>
               <li class="nav-item athor">
-                <span>登录</span>
-                <span>·注册</span>
+                <span>
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="Lobutton">登录</button>
+                </span>
+                <b>·</b>
+                <span>
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="rebutton">注册</button>
+                </span>
               </li>
-              <li class="nav-item loginon">
-                <a href="#"></a>
-                <div class="userimg"><img src="" alt=""></div>
-              </li>
+              <%}else{%>
+
+                <li class="nav-item loginon">
+                  <a href="#"></a>
+                  <div class="userimg">
+                    <img src="<%=headpic %>" alt="">
+                  </div>
+                </li>
+                <%}%>
+
             </ul>
             <div class="show-down-box">
               <ul class="show-down">
                 <li class="current">
-                  <a>首页</a>
+                  <a href='/'>首页</a>
                 </li>
                 <li>
                   <a>专栏</a>
@@ -104,9 +115,11 @@
                   </a>
                 </li>
                 <li>
-                  <a>
-                    <i><img src="images/loginout.png"/></i>
-                    <span>登出</span>
+                  <a href="/logout">
+                    <i>
+                      <img src="../images/loginout.png" />
+                    </i>
+                    <span class="logout">登出</span>
                   </a>
                 </li>
               </ul>
@@ -117,9 +130,9 @@
     </header>
     <article>
       <div class="content">
-        <h1>如何在三年内快速成长为一名技术专家</h1>
-        <p>工作前三年是职业生涯中成长最快的几年，在这段时间里你会充满激情，做事专注，也容易养成良好的习惯。在我们公司有些同学在前三年中就快速成为某一个领域的技术专家，有些同学也可能止步不前。本文和大家一起探讨下如何在三年内快速成长为一名技术专家。</p>
-        <p>作者：XXX</p>
+        <h1><%= title%></h1>
+        <p><%= content%></p>
+        <p>作者：<%= username%></p>
       </div>
       <div class="comment">
         <h2>评论</h2>
@@ -175,5 +188,9 @@
       </div>
     </article>
     <script src="../javascripts/problemDeyail.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/index.js"></script> 
+    <script src="/javascripts/header.js"></script>
+    
+
   </body>
 </html>

@@ -3,17 +3,76 @@ let question = require('../models/question');
 let userInfor = require('../models/userInfor');
 let router = express.Router();
 
-router.get('/', (req,res) => {
-    res.render('sendQuestion',{});
+router.get('/', function (req, res, next) {
+  let headpic = '';
+  if (req.session.userId) {
+    //获得登录人id
+    var userid = req.session.userId;
+    var login = true;
+
+
+  } else {
+    var userid = '';
+    var login = false;
+
+  }
+
+  //从数据库查找
+  userInfor.findUser('userInfor', {
+    userid
+  }, function (err, result) {
+    // console.log(result);
+    if (result.length == 0) {
+      headpic = "";
+      return;
+    } else {
+      headpic = result[0].headPic;
+    }
+  });
+
+  question.findUser("questions", {}, function (err, result) {
+    if (err) {
+      return;
+    } else {}
+    res.render('sendQuestion', {
+      title: "666",
+      result,
+      username: req.session.username,
+      login,
+      headpic
+    });
+    return;
+  });
+
+});
+router.get('/logout', function (req, res, next) {
+  req.session.userId = '';
+  console.log(req.session.userId);
+  res.redirect('/');
+
 });
 
 
 let myquestion = [];
 router.post("/subProblem",(req,res) => {
-  let {username,title,content,time} = req.body;
+  let {title,content,time} = req.body;
   let tag = req.body['tag[]'];
   let usernme = req.session.username;
-  question.insertData('questions',{username,title,tag,content,time},function (err,result) {
+  let data = {
+    userId: req.session.userId,
+    username,
+    content,
+    title,
+    tag,      
+    time,
+    lookTimes: 0,
+    isSolved: 'false',
+    up:0,
+    down:0,
+    collect:0,
+    Reply: []  
+  }
+  question.insertData('questions',data,function (err,result) {
     console.log(result);
     if(err){
       res.send("问题未能成功发布");
@@ -24,14 +83,13 @@ router.post("/subProblem",(req,res) => {
     }else {
       var userId =  req.session.userId;
       var questionId = result._id;
-
+      
       console.log(userId);
       userInfor.updateData('userInfor',{userid : userId},{$push : {'myquestion' : questionId}},null,function (err,result) {
         if(err){
           res.send("插入数据失败");
           return;
         }
-        console.log(result);
         res.send("问题发布成功");
       });
       }

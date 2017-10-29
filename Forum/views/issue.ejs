@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>我的问题</title>
-    <link rel="stylesheet" type="text/css" href="stylesheets/base.css" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/header.css" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/issue.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/base.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/header.css" />
+    <link rel="stylesheet" type="text/css" href="../stylesheets/issue.css" />
   </head>
 
   <body>
@@ -23,16 +23,27 @@
                   <div class="icon ico-arrow-down-b"></div>
                 </div>
                 <!-- 首页按钮下拉菜单 -->
-
+                <%if(!login){%>
               </li>
               <li class="nav-item athor">
-                <span>登录</span>
-                <span>·注册</span>
+                <span>
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="Lobutton">登录</button>
+                </span>
+                <b>·</b>
+                <span>
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="rebutton">注册</button>
+                </span>
               </li>
-              <li class="nav-item loginon">
-                <a href="#"></a>
-                <div class="userimg"><img src="" alt=""></div>
-              </li>
+              <%}else{%>
+
+                <li class="nav-item loginon">
+                  <a href="#"></a>
+                  <div class="userimg">
+                    <img src="<%=headpic %>" alt="">
+                  </div>
+                </li>
+                <%}%>
+
             </ul>
             <div class="show-down-box">
               <ul class="show-down">
@@ -57,69 +68,87 @@
               <ul>
                 <li>
                   <a>
-                    <i><img src="images/write.png"/></i>
-                    <span>写文章</span>
+                    <i>
+                      <img src="../images/write.png" />
+                    </i>
+                    <span class="quiz">写文章</span>
                   </a>
                 </li>
                 <li class="li-line">
                   <a>
-                    <i><img src="images/draft.png"/></i>
+                    <i>
+                      <img src="../images/draft.png" />
+                    </i>
                     <span>草稿</span>
                   </a>
                 </li>
                 <li>
-                  <a>
-                    <i><img src="images/mypage.png"/></i>
+                  <a href="/personalCenter">
+                    <i>
+                      <img src="../images/mypage.png" />
+                    </i>
                     <span>我的主页</span>
                   </a>
                 </li>
                 <li>
-                  <a>
-                    <i><img src="images/problem.png"/></i>
+                  <a href="/users/issue">
+                    <i>
+                      <img src="../images/problem.png" />
+                    </i>
                     <span>我的问题</span>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <i><img src="images/collection.png"/></i>
+                    <i>
+                      <img src="../images/collection.png" />
+                    </i>
                     <span>我的收藏</span>
                   </a>
                 </li>
                 <li class="li-line">
                   <a>
-                    <i><img src="images/label.png"/></i>
+                    <i>
+                      <img src="../images/label.png" />
+                    </i>
                     <span>标签管理</span>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <i><img src="images/set.png"/></i>
+                    <i>
+                      <img src="../images/set.png" />
+                    </i>
                     <span>设置</span>
                   </a>
                 </li>
                 <li class="li-line">
                   <a>
-                    <i><img src="images/about.png"/></i>
+                    <i>
+                      <img src="../images/about.png" />
+                    </i>
                     <span>关于</span>
                   </a>
                 </li>
                 <li>
-                  <a>
-                    <i><img src="images/loginout.png"/></i>
-                    <span>登出</span>
+                  <a href="/logout">
+                    <i>
+                      <img src="../images/loginout.png" />
+                    </i>
+                    <span class="logout">登出</span>
                   </a>
                 </li>
               </ul>
-
             </div>
           </div>
         </div>
       </div>
 
     </header>
+
     <article>
       <div class="user">
-        <img src="images/TOU.jpg" />
+        <img src="../images/TOU.jpg" />
         <p class="username">username</p>
         <p>
           <!--跳转到个人资料-->
@@ -131,41 +160,22 @@
       <div class="quiz">我的提问</div>
       
       <ul>
-        <li>
-          <div>
-            <p>
-              <a href="#">问题：面向未来，勇担重任——以习近平同志为核心的党中央为十九届“两委”人事准备工作指明正确方向</a>
-            </p>
-            <p><time>2017-10-25 11.05</time><span>回复：1</span></p>
+        <% for(var i=0; i<result.length;i++){ %>
+          <li>
+            <div>
+              <a href="#">
+                <p>
+                  <a href="javascript:(0)">问题：<%= result[i]['title']%></a>
+                </p>
+                <p><time><%= result[i]['time']%></time><span>回复：<%= result[i]['Reply'][0]%></span></p>
+              </a>
           </div>
-        </li>
-        <li>
-          <div>
-            <p>问题面向未来，勇担重任——以习近平同志为核心的党中央为十九届“两委”人事准备工作指明正确方向</p>
-            <p><time>2017-10-25 11.05</time><span>回复：1</span></p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <p>问题面向未来，勇担重任——以习近平同志为核心的党中央为十九届“两委”人事准备工作指明正确方向</p>
-            <p><time>2017-10-25 11.05</time><span>回复：1</span></p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <p>问题面向未来，勇担重任——以习近平同志为核心的党中央为十九届“两委”人事准备工作指明正确方向面向未来，勇担重任——以习近平同志为核心的党中央为十九届“两委”人事准备工作指明正确方向</p>
-            <p><time>2017-10-25 11.05</time><span>回复：1</span></p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <p>问题面向未来，勇担重任——以习近平同志为核心的党中央为十九届“两委”人事准备工作指明正确方向</p>
-            <p><time>2017-10-25 11.05</time><span>回复：1</span></p>
-          </div>
-        </li>
+          </li>
+        <%} %>
       </ul>
     </section>
     <footer></footer>
   </body>
+  <script src="/javascripts/index.js"></script>
 
 </html>

@@ -44,10 +44,31 @@ function deleted(collectionName,data,callback) {
     this.model(collectionName).remove(data,callback);
 }
 
+/**
+ * 
+ * @param {* 集合名} collectionName 
+ * @param {* mongodb中自动生成的_id} id 
+ * @param {* 要修改的数据} updateData
+ * @param {* 回调函数} callback 
+ */
+function findByIdAndUpdateMet(collectionName,id,updateData,callback){
+    this.model(collectionName).findByIdAndUpdate(id,updateData,callback);
+}
+
+/**
+ * 
+ * @param {* 集合名} collection 
+ * @param {* mongodb中自动生成的_id} id 
+ * @param {* 回调函数} callback 
+ */
+function findById(collection,id,callback){
+    this.model(collectionName).findById(id,callback);
+}
+
 // 这里写了四个基本的方法,并没有一一测试过,如果有错及时和我说,要是要添加其他方法,也可以和我说
 
 
 /**
  * 向外部暴露方法
  */
-module.exports = { insertData, find, update, deleted};
+module.exports = { insertData, find, update, deleted, findByIdAndUpdateMet,findById};
