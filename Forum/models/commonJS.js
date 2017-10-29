@@ -11,4 +11,20 @@ function encryption(str){
     return newStr;
 }
 
-module.exports = { encryption };
+/**
+ * 
+ * @param {* 字符串} str 
+ * @param {* 是否去除中间空格，g表示去除} is_global 
+ */
+function Trim(str,is_global)
+{
+ var result;
+ result = str.replace(/(^\s+)|(\s+$)/g,"");
+ if(is_global.toLowerCase()=="g")
+ {
+  result = result.replace(/\s/g,"");
+  }
+ return result;
+}
+
+module.exports = { encryption, Trim };

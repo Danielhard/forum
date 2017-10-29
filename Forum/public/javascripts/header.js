@@ -49,17 +49,5 @@
             flag = false;
         }
     }, true);
-    // oCommentBlock.addEventListener('touchstart', function () {
-    //     if (lock === false) {
-    //         oshowPersonal.style.display = "none";
-    //         lock = true;
-    //     }
-    //     if (flag === false) {
-    //         oshowDown.style.display = "none";
-    //         lock = true;
-    //     }
-    // });
-
-
 })()
 

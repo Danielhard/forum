@@ -2,6 +2,7 @@ var express = require('express');
 let moment = require('moment');
 let userInfor = require('../models/userInfor');
 let question = require('../models/question');
+let commonJs = require('../models/commonJS');
 var router = express.Router();
 
 /* GET users listing. */
@@ -20,7 +21,7 @@ router.get('/issue',(req,res) => {
 
     userInfor.findUser('userInfor',{ username },(err,resultInfor) => {
       let headpic = resultInfor[0]['headPic'];
-      console.log(headpic);
+      headpic = commonJs.Trim(headpic, 'g');
       res.render('issue',{ result,login,headpic});
     })
   });

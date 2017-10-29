@@ -69,7 +69,7 @@
                 <li>
                   <a>
                     <i><img src="../images/write.png"/></i>
-                    <span>写文章</span>
+                    <span class="quiz">写文章</span>
                   </a>
                 </li>
                 <li class="li-line">
@@ -79,13 +79,13 @@
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a href="/personalCenter">
                     <i><img src="../images/mypage.png"/></i>
                     <span>我的主页</span>
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a href="/users/issue">
                     <i><img src="../images/problem.png"/></i>
                     <span>我的问题</span>
                   </a>
@@ -129,7 +129,7 @@
       </div>
     </header>
     <article>
-      <div class="content">
+      <div id="content" class="content" data-id="<%= id%>">
         <h1><%= title%></h1>
         <p><%= content%></p>
         <p>作者：<%= username%></p>
@@ -137,56 +137,31 @@
       <div class="comment">
         <h2>评论</h2>
         <div class="comment-input">
-          <textarea placeholder="说说你的看法" class="countent"></textarea>
-          <button>评论</button>
-          
+          <textarea id="replyContent" placeholder="说说你的看法" class="countent"></textarea>
+          <button id="sendReply">评论</button>
         </div>
         <ul id="box">
+
+          <% for(var i=0;i<reply.length;i++){ %>
           <li>
             <div class="user">
-              <img src="../images/TOU.jpg">
+              <img src="<%= reply[i]['headpic']%>">
             </div>
             <div class="username">
-              <h1 class="tag">nameuser</h1>
-              <p class="countent">快乐十分建设路口菲利克斯咖啡店快乐十分建设路口菲利克斯咖啡店快乐十分建设路口菲利克斯咖啡店</p>
+              <h1 class="tag"><%= reply[i]['username']%></h1>
+              <p class="countent"><%= reply[i]['ReplyContent']%></p>
             </div>
             <div class="footer">
               <span><img src="../images/triangle.png"/><a href="#">0</a></span>
               <span><img src="../images/Pinglun.png"/><a href="#">0条评论</a></span>
-              <span><a href="#" class="time">20分钟前</a></span>
+              <span><a href="#" class="time"><%= reply[i]['replyTime']%></a></span>
             </div>
           </li>
-          <li>
-            <div class="user">
-              <img src="../images/TOU.jpg">
-            </div>
-            <div class="username">
-              <h1>nameuser</h1>
-              <p>快乐十分建设路口菲利克斯咖啡店</p>
-            </div>
-            <div class="footer">
-              <span><img src="../images/triangle.png"/><a href="#">0</a></span>
-              <span><img src="../images/Pinglun.png"/><a href="#">0条评论</a></span>
-              <span><a href="#">20分钟前</a></span>
-            </div>
-          </li>
-          <li>
-            <div class="user">
-              <img src="../images/TOU.jpg">
-            </div>
-            <div class="username">
-              <h1>nameuser</h1>
-              <p>快乐十分建设路口菲利克斯咖啡店</p>
-            </div>
-            <div class="footer">
-              <span><img src="../images/triangle.png"/><a href="#">0</a></span>
-              <span><img src="../images/Pinglun.png"/><a href="#">0条评论</a></span>
-              <span><a href="#">20分钟前</a></span>
-            </div>
-          </li>
+          <% } %>
         </ul>
       </div>
     </article>
+    <script src="/Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
     <script src="../javascripts/problemDeyail.js" type="text/javascript" charset="utf-8"></script>
     <script src="/javascripts/index.js"></script> 
     <script src="/javascripts/header.js"></script>

@@ -1,6 +1,7 @@
 var express = require('express');
 let question = require('../models/question');
 let usersInfor = require('../models/userInfor');
+let commonJs = require('../models/commonJS');
 var router = express.Router();
 
 
@@ -24,12 +25,11 @@ router.get('/', function (req, res, next) {
   usersInfor.findUser('userInfor', {
     userid
   }, function (err, result) {
-    // console.log(result);
     if (result.length == 0) {
       headpic = "";
       return;
     } else {
-      headpic = result[0].headPic;
+      headpic = commonJs.Trim(result[0].headPic,'g');
     }
   });
 
