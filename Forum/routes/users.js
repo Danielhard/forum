@@ -5,24 +5,12 @@ let question = require('../models/question');
 var router = express.Router();
 
 /* GET users listing. */
-// router.get('/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
-
-
-
-
-
-
-
-
 
 router.get('/issue',(req,res) => {
   let username = req.session.username;
-
+  var login =req.session.login;
   // 通过username查询到该用户提的所有问题
   question.findUser('questions',{username}, (err,result) =>{
-    console.log(result);
     for(var i = 0; i<result.length; i++){
       let data = new Date(parseInt(result[i]['time']));
       console.log(moment(data).format('LLL'));
@@ -30,11 +18,12 @@ router.get('/issue',(req,res) => {
       result[i]['Reply'][0] = result[i]['Reply'].length;
     }
 
-    console.log(result);
-    res.render('issue',{ result });
+    userInfor.findUser('userInfor',{ username },(err,resultInfor) => {
+      let headpic = resultInfor[0]['headPic'];
+      console.log(headpic);
+      res.render('issue',{ result,login,headpic});
+    })
   });
 });
-
-
 
 module.exports = router;

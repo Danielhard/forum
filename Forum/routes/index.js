@@ -8,16 +8,16 @@ var router = express.Router();
 
 router.get('/', function (req, res, next) {
   let headpic = '';
+  let login;
   if (req.session.userId) {
     //获得登录人id
     var userid = req.session.userId;
-    var login = true;
-
-
+    req.session.login = true;
+    login  = true;
   } else {
     var userid = '';
-    var login = false;
-
+    req.session.login = false;
+    login = false;
   }
 
   //从数据库查找
