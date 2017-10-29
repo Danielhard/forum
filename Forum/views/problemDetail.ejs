@@ -68,65 +68,49 @@
               <ul>
                 <li>
                   <a>
-                    <i>
-                      <img src="../images/write.png" />
-                    </i>
-                    <span class="quiz">写文章</span>
+                    <i><img src="../images/write.png"/></i>
+                    <span>写文章</span>
                   </a>
                 </li>
                 <li class="li-line">
                   <a>
-                    <i>
-                      <img src="../images/draft.png" />
-                    </i>
+                    <i><img src="../images/draft.png"/></i>
                     <span>草稿</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/personalCenter">
-                    <i>
-                      <img src="../images/mypage.png" />
-                    </i>
+                  <a>
+                    <i><img src="../images/mypage.png"/></i>
                     <span>我的主页</span>
                   </a>
                 </li>
                 <li>
-                  <a href="/users/issue">
-                    <i>
-                      <img src="../images/problem.png" />
-                    </i>
+                  <a>
+                    <i><img src="../images/problem.png"/></i>
                     <span>我的问题</span>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <i>
-                      <img src="../images/collection.png" />
-                    </i>
+                    <i><img src="../images/collection.png"/></i>
                     <span>我的收藏</span>
                   </a>
                 </li>
                 <li class="li-line">
                   <a>
-                    <i>
-                      <img src="../images/label.png" />
-                    </i>
+                    <i><img src="../images/label.png"/></i>
                     <span>标签管理</span>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <i>
-                      <img src="../images/set.png" />
-                    </i>
+                    <i><img src="../images/set.png"/></i>
                     <span>设置</span>
                   </a>
                 </li>
                 <li class="li-line">
                   <a>
-                    <i>
-                      <img src="../images/about.png" />
-                    </i>
+                    <i><img src="../images/about.png"/></i>
                     <span>关于</span>
                   </a>
                 </li>
@@ -146,14 +130,14 @@
     </header>
     <article>
       <div class="content">
-        <h1>如何在三年内快速成长为一名技术专家</h1>
-        <p>工作前三年是职业生涯中成长最快的几年，在这段时间里你会充满激情，做事专注，也容易养成良好的习惯。在我们公司有些同学在前三年中就快速成为某一个领域的技术专家，有些同学也可能止步不前。本文和大家一起探讨下如何在三年内快速成长为一名技术专家。</p>
-        <p>作者：XXX</p>
+        <h1><%= title%></h1>
+        <p><%= content%></p>
+        <p>作者：<%= username%></p>
       </div>
       <div class="comment">
         <h2>评论</h2>
         <div class="comment-input">
-          <textarea placeholder="说说你的看法" ></textarea>
+          <textarea placeholder="说说你的看法" class="countent"></textarea>
           <button>评论</button>
           
         </div>
@@ -163,13 +147,13 @@
               <img src="../images/TOU.jpg">
             </div>
             <div class="username">
-              <h1>nameuser</h1>
-              <p>快乐十分建设路口菲利克斯咖啡店快乐十分建设路口菲利克斯咖啡店快乐十分建设路口菲利克斯咖啡店</p>
+              <h1 class="tag">nameuser</h1>
+              <p class="countent">快乐十分建设路口菲利克斯咖啡店快乐十分建设路口菲利克斯咖啡店快乐十分建设路口菲利克斯咖啡店</p>
             </div>
             <div class="footer">
               <span><img src="../images/triangle.png"/><a href="#">0</a></span>
               <span><img src="../images/Pinglun.png"/><a href="#">0条评论</a></span>
-              <span><a href="#">20分钟前</a></span>
+              <span><a href="#" class="time">20分钟前</a></span>
             </div>
           </li>
           <li>
