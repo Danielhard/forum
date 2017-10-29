@@ -32,7 +32,8 @@ router.get('/', function (req, res, next) {
         headpic = "";
         return;
       } else {
-        headpic = commonJs.Trim(result[0].headPic,'g');
+        headpic = result[0].headpic;
+        // headpic = commonJs.Trim(result[0].headPic,'g');
       }
     });
   

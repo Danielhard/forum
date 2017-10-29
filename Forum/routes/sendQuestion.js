@@ -22,12 +22,12 @@ router.get('/', function (req, res, next) {
   userInfor.findUser('userInfor', {
     userid
   }, function (err, result) {
-    // console.log(result);
+    console.log(result);
     if (result.length == 0) {
       headpic = "";
       return;
     } else {
-      headpic = commonJs.Trim(result[0].headPic , 'g');
+      headpic = commonJs.Trim(result[0].headPic,'g');
     }
   });
 
@@ -58,7 +58,7 @@ let myquestion = [];
 router.post("/subProblem",(req,res) => {
   let {title,content,time} = req.body;
   let tag = req.body['tag[]'];
-  let usernme = req.session.username;
+  let username = req.session.username;
   let data = {
     userId: req.session.userId,
     username,

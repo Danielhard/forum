@@ -79,7 +79,12 @@
       return;
     }else {
       $.post("/sendQuestion/subProblem",data,function (data) {
-        alert(data,800);
+        if(data === '问题发布成功') {
+          setTimeout(function(){
+            window.location.href = '/';
+          },1000);
+          alert(data,800);
+        }
       })}
   });
 })();

@@ -148,11 +148,11 @@
 
     <article>
       <div class="user">
-        <img src="../images/TOU.jpg" />
+        <img src="<%= headpic%>" />
         <p class="username">username</p>
         <p>
           <!--跳转到个人资料-->
-          <a href=""><span>设置</span></a>
+          <a href="/personalCenter"><span>设置</span></a>
         </p>
       </div>
     </article>
@@ -162,10 +162,10 @@
       <ul>
         <% for(var i=0; i<result.length;i++){ %>
           <li>
-            <div>
-              <a href="#">
+            <div class="myQuestionList" data-id= "<%= result[i]['_id']%>">
+              <a href="javascript:(0)">
                 <p>
-                  <a href="javascript:(0)">问题：<%= result[i]['title']%></a>
+                  <span>问题：<%= result[i]['title']%></span>
                 </p>
                 <p><time><%= result[i]['time']%></time><span>回复：<%= result[i]['Reply'][0]%></span></p>
               </a>
@@ -179,4 +179,5 @@
   <script type="text/javascript" src="/Plug-in/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
   <script src="/javascripts/header.js"></script>
   <script src="/javascripts/index.js"></script>
+  <script src="/javascripts/issue.js"></script>
 </html>

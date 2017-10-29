@@ -15,16 +15,16 @@
 
     for (var i = 0; i < oLike.length; i++) {
         (function (i) {
-            var count = parseInt($('.count').html());
             oLike[i].addEventListener('touchstart', function (event) {
                 var questionId = oLi[i].dataset.id;
+                var count = parseInt($('.count').eq(i).html());
                 console.log(questionId);
                        count++;
                     $.post('/up/' + questionId, {
                         count
                     }, function (data) {
                         if (data.status == 1) {
-                            $('.count').html(count);
+                            $('.count').eq(i).html(count);
                         }
                     });
                 
@@ -77,6 +77,15 @@
     let entryItemCollection = document.querySelectorAll('.entry-item');
     for (var i = 0; i < entryItemCollection.length; i++) {
         entryItemCollection[i].addEventListener('click',function(e){
+            let target = event.target;
+            while(target){
+                if(target.classList.contains('item2')){
+                    return;
+                }else if(target.classList.contains('entry-item')){
+                    break;
+                }
+                target = target.parentNode;
+            }
             window.location.href = '/problemDetail/' + this.dataset.id; 
         });
     }

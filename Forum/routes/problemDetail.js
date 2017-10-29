@@ -32,6 +32,7 @@ router.get('/:questionId', (req, res) => {
       } else if(dTime / 31536000 > 1) {
         result[0].Reply[i]['replyTime'] = (dTime / 86400).toFixed(0) + '年前';
       }
+      result[0].Reply[i]['headpic'] = '../' + commonJs.Trim(result[0].Reply[i]['headpic'],'g');
     }
 
 
@@ -42,7 +43,8 @@ router.get('/:questionId', (req, res) => {
       let headpic = resultInfor[0]['headPic'];
       returnData.id=req.params.questionId;
       returnData.login= login;
-      returnData.headpic= commonJs.Trim(headpic,'g');
+      // returnData.headpic= commonJs.Trim(headpic,'g');
+      returnData.headpic= '../' + commonJs.Trim(headpic,'g');
       res.render('problemDetail', returnData);
     })
   });
@@ -66,7 +68,8 @@ router.post('/reply',(req,res) => {
       });
       return;
     }
-    let headpic = result[0]['headPic'];
+    // let headpic = commonJs.Trim(result[0]['headPic'],'g');
+    let headpic = '../' + commonJs.Trim(result[0]['headPic'],'g');
     let sendData = {
       status : 1,
       data : {

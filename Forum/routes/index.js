@@ -37,12 +37,12 @@ router.get('/', function (req, res, next) {
     if (err) {
       return;
     } else {}
+    console.log(result);
     res.render('index', {
       title: "666",
       result,
-      username: req.session.username,
       login,
-      headpic
+      headpic,
     });
     return;
   });

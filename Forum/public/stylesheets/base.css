@@ -49,3 +49,8 @@ table {
 html{
 	font-size:100px;
 }
+
+a,button,div{
+	-webkit-tap-highlight-color:transparent;            /*去除a标签被点中时的蓝底色*/
+	-webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;
+}

@@ -21,7 +21,7 @@ router.get('/issue',(req,res) => {
 
     userInfor.findUser('userInfor',{ username },(err,resultInfor) => {
       let headpic = resultInfor[0]['headPic'];
-      headpic = commonJs.Trim(headpic, 'g');
+      headpic = '../' + commonJs.Trim(headpic, 'g');
       res.render('issue',{ result,login,headpic});
     })
   });
